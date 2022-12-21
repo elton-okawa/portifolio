@@ -2,11 +2,7 @@
   "name": "@elton-okawa/button",
   "version": "0.0.0",
   "private": true,
-  "description": "",
   "main": "./index.tsx",
-  "keywords": [],
-  "author": "Elton Okawa",
-  "license": "MIT",
   "dependencies": {
     "react": "18.2.0"
   },
