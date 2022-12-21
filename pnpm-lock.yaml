@@ -29,6 +29,25 @@ importers:
     devDependencies:
       '@types/react': 18.0.26
 
+  packages/core/button:
+    specifiers:
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      eslint: ^8.30.0
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      eslint: 8.30.0
+
+  packages/eslint-config-react:
+    specifiers: {}
+
+  packages/prettier-config:
+    specifiers:
+      prettier: ^2.8.1
+    devDependencies:
+      prettier: 2.8.1
+
   portifolio:
     specifiers:
       '@elton-okawa/button': workspace:^0.0.0

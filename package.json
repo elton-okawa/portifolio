@@ -7,8 +7,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter portifolio dev",
-    "lint": "pnpm eslint .",
-    "format": "pnpm prettier --write ."
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.47.0",
