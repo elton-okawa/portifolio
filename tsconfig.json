@@ -33,10 +33,5 @@
     "typeRoots": ["./node_modules/@types", "./packages/types"],
     "useUnknownInCatchVariables": false
   },
-  "exclude": [
-    ".vscode",
-    ".next",
-    "dist",
-    "node_modules"
-  ]
+  "exclude": [".vscode", ".next", "dist", "node_modules"]
 }

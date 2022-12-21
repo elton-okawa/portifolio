@@ -6,6 +6,6 @@ const nextConfig = {
     // https://github.com/vercel/next.js/issues/9474
     externalDir: true,
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
