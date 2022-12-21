@@ -2,9 +2,33 @@
 
 > Import common eslint config for `React` at once
 
-# Gotchas
+## Quick start
 
-## Why `prettier` must be the last one in `extends`?
+- Add this package as `devDependencies`
+- Add a script command on `package.json`
+
+```json
+{
+  "scripts": {
+    "lint": "pnpm eslint ."
+  },
+  "devDependencies": {
+    "@elton-okawa/eslint-config-react": "workspace:^1.0.0"
+  }
+}
+```
+
+- Create `.eslintrc.json` file on root with the following content:
+
+```json
+{
+  "extends": ["@elton-okawa/react"]
+}
+```
+
+## Gotchas
+
+### Why `prettier` must be the last one in `extends`?
 
 There are two kinds of rules:
 
