@@ -1,0 +1,17 @@
+{
+  "name": "@elton-okawa/button",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "./index.tsx",
+  "keywords": [],
+  "author": "Elton Okawa",
+  "license": "MIT",
+  "dependencies": {
+    "react": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.26",
+    "typescript": "4.9.4"
+  }
+}

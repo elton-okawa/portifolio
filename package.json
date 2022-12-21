@@ -1,0 +1,12 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter portifolio dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
