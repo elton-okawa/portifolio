@@ -1,7 +1,12 @@
 import React from 'react';
 
-export function Button(props: any) {
-  return <button onClick={() => props.onClick()}>{props.children}</button>;
+export interface ButtonProps {
+  label: string;
+  onClick: () => void;
+}
+
+export function Button(props: ButtonProps) {
+  return <button onClick={() => props.onClick()}>{props.label}</button>;
 }
 
 export default Button;
