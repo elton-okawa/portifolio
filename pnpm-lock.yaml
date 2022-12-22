@@ -13,15 +13,22 @@ importers:
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@types/react': 18.0.26
-      eslint: ^8.30.0
-      react: 18.2.0
-    dependencies:
-      react: 18.2.0
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
       '@elton-okawa/prettier-config': link:../../prettier-config
       '@types/react': 18.0.26
-      eslint: 8.30.0
+
+  packages/core/navigation-drawer:
+    specifiers:
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+      react: ^18.2.0
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+      react: 18.2.0
 
   packages/eslint-config-react:
     specifiers:
@@ -58,7 +65,7 @@ importers:
       react-dom: 18.2.0
       typescript: ^4.9.4
     dependencies:
-      '@elton-okawa/button': link:../packages/core/button
+      '@elton-okawa/button': link:../packages/core/navigation-drawer
       '@next/font': 13.0.7
       next: 13.0.7_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -1737,7 +1744,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
