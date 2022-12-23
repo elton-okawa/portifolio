@@ -1,0 +1,34 @@
+@import 'open-props/borders';
+@import '@elton-okawa/theme-config/theme';
+
+.navbar {
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(148, 148, 148);
+  transition: 0.5s;
+}
+
+.open {
+  width: 300px;
+}
+
+.closed {
+  width: 50px;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+
+.selected {
+  border-radius: var(--radius-5);
+  border-style: solid;
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
