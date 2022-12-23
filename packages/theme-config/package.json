@@ -1,0 +1,11 @@
+{
+  "name": "@elton-okawa/theme-config",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "open-props": "^1.5.3"
+  },
+  "peerDependencies": {
+    "open-props": ">1"
+  }
+}
