@@ -52,14 +52,27 @@ importers:
       '@types/react': 18.0.26
       open-props: ^1.5.3
       react: ^18.2.0
-    dependencies:
-      '@elton-okawa/theme-config': link:../../theme-config
-      open-props: 1.5.3
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
       '@elton-okawa/prettier-config': link:../../prettier-config
+      '@elton-okawa/theme-config': link:../../theme-config
       '@types/react': 18.0.26
+      open-props: 1.5.3
       react: 18.2.0
+
+  packages/core/typography:
+    specifiers:
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@elton-okawa/theme-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+      open-props: ^1.5.3
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@elton-okawa/theme-config': link:../../theme-config
+      '@types/react': 18.0.26
+      open-props: 1.5.3
 
   packages/eslint-config-react:
     specifiers:
@@ -7503,6 +7516,7 @@ packages:
 
   /open-props/1.5.3:
     resolution: {integrity: sha512-NzORO2a4Rf/MEo1DBTKxEzJ6ZNx9JswnvwjSKK9QOntg28AoxXt2LdpwfJ1dEQE4mkTdyaWkzwbtPg1yKpKFgw==}
+    dev: true
 
   /open/7.4.2:
     resolution: {integrity: sha512-MVHddDVweXZF3awtlAS+6pgKLlm/JgxZ90+/NBurBoQctVOOB/zDdVjcyPzQ+0laDGbsWgrRkflI65sQeOgT9Q==}
