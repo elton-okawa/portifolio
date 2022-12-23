@@ -1,5 +1,5 @@
 {
-  "name": "@elton-okawa/navigation-drawer",
+  "name": "@elton-okawa/typography",
   "version": "0.0.0",
   "private": true,
   "main": "./index.tsx",
@@ -12,13 +12,12 @@
     "@elton-okawa/eslint-config-react": "workspace:^1.0.0",
     "@elton-okawa/prettier-config": "workspace:^1.0.0",
     "@types/react": "18.0.26",
-    "react": "^18.2.0",
     "@elton-okawa/theme-config": "workspace:^1.0.0",
     "open-props": "^1.5.3"
   },
   "peerDependencies": {
-    "@elton-okawa/theme-config": "workspace:^1.0.0",
     "react": "^18",
+    "@elton-okawa/theme-config": "workspace:^1.0.0",
     "open-props": "^1"
   }
 }
