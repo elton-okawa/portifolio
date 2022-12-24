@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './styles.module.css';
 
 export interface TypographyProps {
-  children: string;
-  variant:
+  children?: string;
+  variant?:
     | 'h1'
     | 'h2'
     | 'h3'
@@ -36,12 +36,10 @@ const htmlVariantMapping = {
   overline: 'p',
 };
 
-export function Typography(props: TypographyProps) {
-  const Component = htmlVariantMapping[props.variant] as React.ElementType;
+export function Typography({ variant = 'body1', children }: TypographyProps) {
+  const Component = htmlVariantMapping[variant] as React.ElementType;
 
-  return (
-    <Component className={styles[props.variant]}>{props.children}</Component>
-  );
+  return <Component className={styles[variant]}>{children}</Component>;
 }
 
 export default Typography;
