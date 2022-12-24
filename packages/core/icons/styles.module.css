@@ -1,0 +1,33 @@
+@import 'open-props/fonts';
+@import '@elton-okawa/theme-config/theme';
+
+.large {
+  width: var(--font-size-6);
+  height: var(--font-size-6);
+}
+
+.medium {
+  width: var(--font-size-5);
+  height: var(--font-size-5);
+}
+
+.small {
+  width: var(--font-size-2);
+  height: var(--font-size-2);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.disabled {
+  color: var(--color-disabled);
+}
