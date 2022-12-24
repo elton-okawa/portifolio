@@ -66,6 +66,7 @@ importers:
   packages/core/navigation-drawer:
     specifiers:
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@elton-okawa/typography': workspace:^0.0.0
@@ -74,6 +75,7 @@ importers:
       react: ^18.2.0
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/icons': link:../icons
       '@elton-okawa/prettier-config': link:../../prettier-config
       '@elton-okawa/theme-config': link:../../theme-config
       '@elton-okawa/typography': link:../typography

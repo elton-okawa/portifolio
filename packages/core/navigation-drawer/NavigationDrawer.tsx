@@ -1,15 +1,16 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 import styles from './styles.module.css';
+import { DrawerProvider } from './DrawerContext';
+import { DrawerContainer } from './DrawerContainer';
 
 export interface NavigationDrawerProps {
-  isOpen: boolean;
-  children: ReactElement[];
+  children: ReactElement;
 }
 
 export function NavigationDrawer(props: NavigationDrawerProps) {
-  const stateClass = props.isOpen ? styles.open : styles.closed;
-
   return (
-    <div className={`${styles.navbar} ${stateClass}`}>{props.children}</div>
+    <DrawerProvider>
+      <DrawerContainer>{props.children}</DrawerContainer>
+    </DrawerProvider>
   );
 }

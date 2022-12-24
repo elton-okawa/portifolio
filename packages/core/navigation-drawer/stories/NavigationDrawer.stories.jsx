@@ -1,24 +1,22 @@
+import { Icon, mdiAccount, mdiHome, mdiWifiSettings } from '@elton-okawa/icons';
 import React from 'react';
+import { DrawerButton } from '../DrawerButton';
 
-import { NavigationDrawer } from '../index';
+import { NavigationDrawer, NavItem } from '../index';
 
 export default {
   title: 'NavigationDrawer',
   component: NavigationDrawer,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 };
 
 const Template = ({ ...args }) => (
   <NavigationDrawer {...args}>
-    <p>One</p>
-    <p>Two</p>
-    <p>Three</p>
+    <DrawerButton />
+    <NavItem icon={<Icon icon={mdiHome} />} label="Home" selected />
+    <NavItem icon={<Icon icon={mdiAccount} />} label="Account" />
+    <NavItem icon={<Icon icon={mdiWifiSettings} />} label="Wifi" />
   </NavigationDrawer>
 );
 
-export const Open = Template.bind({});
-Open.args = {
-  isOpen: true,
-};
+export const Default = Template.bind({});
+Default.args = {};
