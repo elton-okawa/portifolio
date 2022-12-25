@@ -131,6 +131,7 @@ importers:
   portifolio:
     specifiers:
       '@elton-okawa/button': workspace:^0.0.0
+      '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@next/font': 13.0.7
@@ -145,6 +146,7 @@ importers:
       typescript: ^4.9.4
     dependencies:
       '@elton-okawa/button': link:../packages/core/button
+      '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/theme-config': link:../packages/theme-config
       '@next/font': 13.0.7
