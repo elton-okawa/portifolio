@@ -1,10 +1,10 @@
-import React, { ReactElement } from 'react';
+import React, { ReactNode } from 'react';
 
 import styles from './styles.module.css';
 import { useDrawerState } from './DrawerContext';
 
 export interface DrawerContainerProps {
-  children: ReactElement;
+  children: ReactNode;
 }
 
 export function DrawerContainer({ children }: DrawerContainerProps) {
