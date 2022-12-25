@@ -1,4 +1,6 @@
 @import 'open-props/borders';
+@import 'open-props/sizes';
+@import 'open-props/fonts';
 @import '@elton-okawa/theme-config/theme';
 
 .navbar {
@@ -8,15 +10,17 @@
   top: 0;
   left: 0;
   background-color: rgb(148, 148, 148);
-  transition: 0.5s;
+  transition: 0.3s;
+  padding: var(--size-1);
 }
 
 .open {
-  width: 300px;
+  width: 200px;
 }
 
+/* TODO think a better way to handle this hardcoded value, transitions need to know about the width to work correctly*/
 .closed {
-  width: 50px;
+  width: 42px;
 }
 
 .navItem {
