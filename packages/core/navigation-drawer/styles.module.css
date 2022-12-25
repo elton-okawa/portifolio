@@ -1,21 +1,39 @@
 .navbar {
+  /* TODO think a better way to handle this hardcoded value, transitions need to know about the width to work correctly*/
+  --size-open: 200px;
+  --size-closed: 42px;
+  --transition-time: 0.3s;
+
   height: 100vh;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: rgb(148, 148, 148);
-  transition: 0.3s;
+  transition: var(--transition-time);
   padding: var(--size-1);
 }
 
 .open {
-  width: 200px;
+  width: var(--size-open);
 }
 
-/* TODO think a better way to handle this hardcoded value, transitions need to know about the width to work correctly*/
 .closed {
-  width: 42px;
+  width: var(--size-closed);
+}
+
+.drawerButton {
+  position: fixed;
+  top: 30px;
+  transition: var(--transition-time);
+}
+
+.drawerOpen {
+  left: calc(var(--size-open) - 20px);
+}
+
+.drawerClosed {
+  left: calc(var(--size-closed) - 20px);
 }
 
 .navItem {

@@ -11,7 +11,6 @@ export default {
 
 const Template = ({ ...args }) => (
   <NavigationDrawer {...args}>
-    <DrawerButton />
     <NavItem icon={<Icon icon={mdiHome} />} label="Home" selected />
     <NavItem icon={<Icon icon={mdiAccount} />} label="Account" />
     <NavItem icon={<Icon icon={mdiWifiSettings} />} label="Wifi" />

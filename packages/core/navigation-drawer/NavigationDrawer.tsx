@@ -1,7 +1,8 @@
-import React, { ReactNode, useState } from 'react';
-import styles from './styles.module.css';
+import React, { ReactNode } from 'react';
+
 import { DrawerProvider } from './DrawerContext';
 import { DrawerContainer } from './DrawerContainer';
+import { DrawerButton } from './DrawerButton';
 
 export interface NavigationDrawerProps {
   children: ReactNode;
@@ -10,7 +11,10 @@ export interface NavigationDrawerProps {
 export function NavigationDrawer(props: NavigationDrawerProps) {
   return (
     <DrawerProvider>
-      <DrawerContainer>{props.children}</DrawerContainer>
+      <DrawerContainer>
+        <DrawerButton />
+        {props.children}
+      </DrawerContainer>
     </DrawerProvider>
   );
 }
