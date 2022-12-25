@@ -1,6 +1,3 @@
-@import 'open-props/fonts';
-@import '@elton-okawa/theme-config/theme';
-
 .large {
   min-width: var(--font-size-6);
   max-width: var(--font-size-6);

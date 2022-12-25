@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@babel/core': ^7.20.7
+      '@elton-okawa/theme-config': workspace:^1.0.0
       '@storybook/addon-essentials': ^7.0.0-beta.13
       '@storybook/addon-interactions': ^7.0.0-beta.13
       '@storybook/addon-links': ^7.0.0-beta.13
@@ -13,6 +14,7 @@ importers:
       '@storybook/react-webpack5': ^7.0.0-beta.13
       '@storybook/testing-library': ^0.0.13
       husky: ^8.0.2
+      open-props: ^1.5.3
       react: ^18.2.0
       react-dom: 18.2.0
       storybook: ^7.0.0-beta.13
@@ -20,6 +22,7 @@ importers:
       webpack: ^5.75.0
     devDependencies:
       '@babel/core': 7.20.7
+      '@elton-okawa/theme-config': link:packages/theme-config
       '@storybook/addon-essentials': 7.0.0-beta.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-interactions': 7.0.0-beta.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-links': 7.0.0-beta.13_biqbaboplfbrettd7655fr4n2y
@@ -28,6 +31,7 @@ importers:
       '@storybook/react-webpack5': 7.0.0-beta.13_6wzqzo2usap6uclugiingfjqx4
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
       husky: 8.0.2
+      open-props: 1.5.3
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       storybook: 7.0.0-beta.13
@@ -127,6 +131,8 @@ importers:
   portifolio:
     specifiers:
       '@elton-okawa/button': workspace:^0.0.0
+      '@elton-okawa/navigation-drawer': workspace:^0.0.0
+      '@elton-okawa/theme-config': workspace:^1.0.0
       '@next/font': 13.0.7
       '@types/node': 18.11.17
       '@types/react': 18.0.26
@@ -139,6 +145,8 @@ importers:
       typescript: ^4.9.4
     dependencies:
       '@elton-okawa/button': link:../packages/core/button
+      '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
+      '@elton-okawa/theme-config': link:../packages/theme-config
       '@next/font': 13.0.7
       next: 13.0.7_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0

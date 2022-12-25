@@ -1,4 +1,4 @@
-@import "open-props/colors";
+@import "open-props/style";
 
 :where(html) {
   --color-primary: var(--blue-6);

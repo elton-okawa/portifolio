@@ -39,7 +39,11 @@ const htmlVariantMapping = {
 export function Typography({ variant = 'body1', children }: TypographyProps) {
   const Component = htmlVariantMapping[variant] as React.ElementType;
 
-  return <Component className={styles[variant]}>{children}</Component>;
+  return (
+    <Component className={`typography ${styles[variant]}`}>
+      {children}
+    </Component>
+  );
 }
 
 export default Typography;

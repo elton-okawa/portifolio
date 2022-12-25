@@ -1,6 +1,4 @@
-@import 'open-props/fonts';
-
-:where(html) {
+.typography {
   --default-font: var(--font-mono);
 }
 
