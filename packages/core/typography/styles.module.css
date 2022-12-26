@@ -1,6 +1,3 @@
-.typography {
-}
-
 .h1 {
   font-family: var(--default-font);
   font-weight: var(--font-weight-3);
@@ -98,4 +95,28 @@
   font-size: var(--font-size-0);
   text-transform: uppercase;
   margin: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.initial {
+  text-align: initial;
+}
+
+.inherit {
+  text-align: inherit;
 }

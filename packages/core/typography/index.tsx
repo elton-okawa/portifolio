@@ -2,22 +2,33 @@ import React from 'react';
 
 import styles from './styles.module.css';
 
+type TypographyVariant =
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'subtitle1'
+  | 'subtitle2'
+  | 'body1'
+  | 'body2'
+  | 'button'
+  | 'caption'
+  | 'overline';
+
+type TypographyAlign =
+  | 'left'
+  | 'right'
+  | 'center'
+  | 'justify'
+  | 'initial'
+  | 'inherit';
+
 export interface TypographyProps {
   children?: string;
-  variant?:
-    | 'h1'
-    | 'h2'
-    | 'h3'
-    | 'h4'
-    | 'h5'
-    | 'h6'
-    | 'subtitle1'
-    | 'subtitle2'
-    | 'body1'
-    | 'body2'
-    | 'button'
-    | 'caption'
-    | 'overline';
+  variant?: TypographyVariant;
+  align?: TypographyAlign;
 }
 
 const htmlVariantMapping = {
@@ -36,11 +47,15 @@ const htmlVariantMapping = {
   overline: 'p',
 };
 
-export function Typography({ variant = 'body1', children }: TypographyProps) {
+export function Typography({
+  variant = 'body1',
+  align = 'left',
+  children,
+}: TypographyProps) {
   const Component = htmlVariantMapping[variant] as React.ElementType;
 
   return (
-    <Component className={`typography ${styles[variant]}`}>
+    <Component className={`${styles[variant]} ${styles[align]}`}>
       {children}
     </Component>
   );
