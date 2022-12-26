@@ -1,5 +1,5 @@
 {
-  "name": "@elton-okawa/button",
+  "name": "@elton-okawa/icon-button",
   "version": "0.0.0",
   "private": true,
   "main": "./index.tsx",

@@ -15,7 +15,9 @@ const Template = ({ ...args }) => {
 
   for (const variant of variants) {
     buttons.push(
-      <IconButton variant={variant} icon={<HomeIcon size="small" />} />
+      <IconButton variant={variant}>
+        <HomeIcon />
+      </IconButton>
     );
     buttons.push(<br />);
   }
