@@ -7,16 +7,18 @@ export default {
   component: Avatar,
 };
 
-const sizes = ['small', 'medium', 'large'];
+const sizes = ['small', 'medium', 'large', 'container'];
 
 const Template = ({ ...args }) => {
   const avatars = [];
 
   for (const size of sizes) {
     avatars.push(
-      <Avatar size={size}>
-        <img src="./profile.png" />
-      </Avatar>
+      <div style={{ width: args.width, height: args.height }}>
+        <Avatar size={size}>
+          <img src="./profile.png" />
+        </Avatar>
+      </div>
     );
     avatars.push(<br />);
   }
@@ -25,4 +27,7 @@ const Template = ({ ...args }) => {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  width: 60,
+  height: 60,
+};

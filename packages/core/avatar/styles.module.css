@@ -20,3 +20,8 @@
   width: var(--font-size-5);
   height: var(--font-size-5);
 }
+
+.container * {
+  width: 100%;
+  height: 100%;
+}

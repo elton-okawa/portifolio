@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import styles from './styles.module.css';
 
-type AvatarSize = 'small' | 'medium' | 'large';
+type AvatarSize = 'small' | 'medium' | 'large' | 'container';
 
 export interface AvatarProps {
   size?: AvatarSize;
