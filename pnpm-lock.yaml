@@ -38,6 +38,16 @@ importers:
       typescript: 4.9.4
       webpack: 5.75.0
 
+  packages/core/avatar:
+    specifiers:
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+
   packages/core/button:
     specifiers:
       '@elton-okawa/eslint-config-react': workspace:^1.0.0

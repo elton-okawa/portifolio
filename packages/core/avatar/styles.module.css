@@ -1,0 +1,22 @@
+.avatar * {
+  border-radius: 50%;
+}
+
+.avatar img {
+  object-fit: scale-down;
+}
+
+.small * {
+  width: var(--font-size-3);
+  height: var(--font-size-3);
+}
+
+.medium * {
+  width: var(--font-size-4);
+  height: var(--font-size-4);
+}
+
+.large * {
+  width: var(--font-size-5);
+  height: var(--font-size-5);
+}
