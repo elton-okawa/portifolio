@@ -1,7 +1,7 @@
 .navbar {
   /* TODO think a better way to handle this hardcoded value, transitions need to know about the width to work correctly*/
   --size-open: 200px;
-  --size-closed: 40px;
+  --size-closed: 48px;
   --transition-time: 0.3s;
   --padding: var(--size-1);
 
@@ -10,7 +10,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(148, 148, 148);
+  background-color: var(--blue-1);
   transition: var(--transition-time);
   padding: var(--padding);
 }
@@ -30,11 +30,11 @@
 }
 
 .drawerOpen {
-  left: calc(var(--size-open) + 2 * var(--padding) - 24px);
+  left: calc(var(--size-open) - 24px);
 }
 
 .drawerClosed {
-  left: calc(var(--size-closed) + 2 * var(--padding) - 24px);
+  left: calc(var(--size-closed) - 24px);
 }
 
 .navItem {
