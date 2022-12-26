@@ -1,7 +1,6 @@
-import { Icon, mdiAccount, mdiHome, mdiWifiSettings } from '@elton-okawa/icons';
 import React from 'react';
-import { DrawerButton } from '../DrawerButton';
 
+import { HomeIcon, AccountIcon } from '@elton-okawa/icons';
 import { NavigationDrawer, NavItem } from '../index';
 
 export default {
@@ -11,9 +10,8 @@ export default {
 
 const Template = ({ ...args }) => (
   <NavigationDrawer {...args}>
-    <NavItem icon={<Icon icon={mdiHome} />} label="Home" selected />
-    <NavItem icon={<Icon icon={mdiAccount} />} label="Account" />
-    <NavItem icon={<Icon icon={mdiWifiSettings} />} label="Wifi" />
+    <NavItem icon={<HomeIcon />} label="Home" selected />
+    <NavItem icon={<AccountIcon />} label="Account" />
   </NavigationDrawer>
 );
 

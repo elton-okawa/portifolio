@@ -3,6 +3,7 @@
   --size-open: 200px;
   --size-closed: 42px;
   --transition-time: 0.3s;
+  --padding: var(--size-1);
 
   height: 100vh;
   position: fixed;
@@ -11,7 +12,7 @@
   left: 0;
   background-color: rgb(148, 148, 148);
   transition: var(--transition-time);
-  padding: var(--size-1);
+  padding: var(--padding);
 }
 
 .open {
@@ -29,11 +30,11 @@
 }
 
 .drawerOpen {
-  left: calc(var(--size-open) - 20px);
+  left: calc(var(--size-open) + 2 * var(--padding) - 24px);
 }
 
 .drawerClosed {
-  left: calc(var(--size-closed) - 20px);
+  left: calc(var(--size-closed) + 2 * var(--padding) - 24px);
 }
 
 .navItem {
