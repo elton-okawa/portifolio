@@ -8,4 +8,6 @@
   --color-success: var(--green-5);
   --color-text: var(--gray-8);
   --color-disabled: var(--gray-4);
+
+  --default-font: var(--font-sans);
 }

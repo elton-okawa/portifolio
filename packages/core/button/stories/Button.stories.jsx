@@ -5,32 +5,22 @@ import { Button } from '../index';
 export default {
   title: 'Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 };
 
-const Template = ({ ...args }) => <Button {...args} />;
+const variants = ['text', 'outlined', 'filled'];
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
+const Template = ({ ...args }) => {
+  const buttons = [];
+
+  for (const variant of variants) {
+    buttons.push(<Button variant={variant}>{args.label}</Button>);
+    buttons.push(<br />);
+  }
+
+  return buttons;
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const Default = Template.bind({});
+Default.args = {
   label: 'Button',
 };
