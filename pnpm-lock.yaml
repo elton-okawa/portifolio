@@ -48,6 +48,18 @@ importers:
       '@elton-okawa/prettier-config': link:../../prettier-config
       '@types/react': 18.0.26
 
+  packages/core/icon-buttons:
+    specifiers:
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/icons': workspace:^0.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/icons': link:../icons
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+
   packages/core/icons:
     specifiers:
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
@@ -145,7 +157,7 @@ importers:
       react-dom: 18.2.0
       typescript: ^4.9.4
     dependencies:
-      '@elton-okawa/button': link:../packages/core/button
+      '@elton-okawa/button': link:../packages/core/icon-buttons
       '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/theme-config': link:../packages/theme-config

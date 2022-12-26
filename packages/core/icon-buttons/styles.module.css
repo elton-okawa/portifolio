@@ -1,0 +1,19 @@
+.button {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  padding: 0px;
+}
+
+.text {
+  background: none;
+  border: none;
+}
+
+.filled {
+  border-style: solid;
+  border-width: 0px;
+  border-radius: var(--radius-5);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+}
