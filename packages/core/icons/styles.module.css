@@ -1,22 +1,22 @@
 .large {
-  min-width: var(--font-size-6);
-  max-width: var(--font-size-6);
-  min-height: var(--font-size-6);
-  max-height: var(--font-size-6);
-}
-
-.medium {
   min-width: var(--font-size-5);
   max-width: var(--font-size-5);
   min-height: var(--font-size-5);
   max-height: var(--font-size-5);
 }
 
-.small {
+.medium {
   min-width: var(--font-size-4);
   max-width: var(--font-size-4);
   min-height: var(--font-size-4);
   max-height: var(--font-size-4);
+}
+
+.small {
+  min-width: var(--font-size-3);
+  max-width: var(--font-size-3);
+  min-height: var(--font-size-3);
+  max-height: var(--font-size-3);
 }
 
 .primary {
