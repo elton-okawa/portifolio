@@ -1,7 +1,7 @@
 .navbar {
   /* TODO think a better way to handle this hardcoded value, transitions need to know about the width to work correctly*/
   --size-open: 200px;
-  --size-closed: 42px;
+  --size-closed: 40px;
   --transition-time: 0.3s;
   --padding: var(--size-1);
 
@@ -41,7 +41,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
+  gap: 8px;
+  height: 40px;
+  padding: 0 8px;
 }
 
 .selected {
