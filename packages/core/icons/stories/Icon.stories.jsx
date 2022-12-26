@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon, mdiHome, mdiAccount } from '../index';
+import { Icon, HomeIcon, AccountIcon } from '../index';
 
 export default {
   title: 'Icon',
@@ -8,15 +8,15 @@ export default {
 };
 
 const Template = ({ children, ...args }) => {
-  const icons = [mdiHome, mdiAccount];
+  const icons = [HomeIcon, AccountIcon];
   const colors = ['primary', 'secondary', 'text', 'disabled'];
   const sizes = ['small', 'medium', 'large'];
 
   const elements = [];
-  for (const icon of icons) {
+  for (const Icon of icons) {
     for (const size of sizes) {
       for (const color of colors) {
-        elements.push(<Icon size={size} color={color} icon={icon} />);
+        elements.push(<Icon size={size} color={color} />);
       }
     }
     elements.push(<br />);

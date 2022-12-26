@@ -3,15 +3,22 @@ import React from 'react';
 import styles from './styles.module.css';
 
 import ThirdPartyIcon from '@mdi/react';
-export * from '@mdi/js';
+import { mdiHome, mdiAccount } from '@mdi/js';
 
 export interface IconProps {
   size?: 'small' | 'medium' | 'large';
-  icon: string;
   color?: 'primary' | 'secondary' | 'text' | 'disabled';
 }
 
-export function Icon({ icon, size = 'medium', color = 'text' }: IconProps) {
+interface GenericIconProps {
+  icon: string;
+}
+
+export function Icon({
+  icon,
+  size = 'medium',
+  color = 'text',
+}: GenericIconProps & IconProps) {
   return (
     <ThirdPartyIcon
       path={icon}
@@ -19,3 +26,10 @@ export function Icon({ icon, size = 'medium', color = 'text' }: IconProps) {
     />
   );
 }
+
+export const HomeIcon = (props: IconProps) => (
+  <Icon icon={mdiHome} {...props} />
+);
+export const AccountIcon = (props: IconProps) => (
+  <Icon icon={mdiAccount} {...props} />
+);
