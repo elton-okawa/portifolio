@@ -9,10 +9,18 @@ export default {
 };
 
 const Template = ({ ...args }) => (
-  <NavigationDrawer {...args}>
-    <NavItem icon={<HomeIcon />} label="Home" selected />
-    <NavItem icon={<AccountIcon />} label="Account" />
-  </NavigationDrawer>
+  <NavigationDrawer
+    {...args}
+    top={<NavItem icon={<HomeIcon />} label="Home" selected />}
+    middle={
+      <>
+        <NavItem icon={<AccountIcon />} label="Account" />
+        <NavItem icon={<AccountIcon />} label="Account" />
+        <NavItem icon={<AccountIcon />} label="Account" />
+      </>
+    }
+    bottom={<NavItem icon={<HomeIcon />} label="Home" />}
+  />
 );
 
 export const Default = Template.bind({});

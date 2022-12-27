@@ -21,45 +21,54 @@ type ItemData = {
   path: string;
 };
 
-const navigation: { top: ItemData[]; bottom: ItemData[] } = {
-  top: [
-    {
-      icon: HomeIcon,
-      label: "Home",
-      path: "/",
-    },
-    {
-      icon: AccountIcon,
-      label: "About",
-      path: "/about",
-    },
-  ],
-  bottom: [],
-};
+const navigation: ItemData[] = [
+  {
+    icon: HomeIcon,
+    label: "Home",
+    path: "/",
+  },
+  {
+    icon: AccountIcon,
+    label: "About",
+    path: "/about",
+  },
+];
 
 export default function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   return (
     <>
-      <NavigationDrawer>
-        <Avatar size="container">
-          <Image alt="profile picture" src={profilePicture} />
-        </Avatar>
-        <NavHide>
-          <Typography variant="h6" align="center">
-            Elton Okawa
-          </Typography>
-          <Typography align="center">Full Stack Developer</Typography>
-          <Typography variant="body2" align="center">
-            NodeJS | ReactJS | GCloud
-          </Typography>
-        </NavHide>
-        {navigation.top.map((data) => renderNavItem(pathname, data))}
-      </NavigationDrawer>
+      <NavigationDrawer
+        top={renderTopNavigation()}
+        middle={renderMiddleNavigation(pathname)}
+      />
       <Component {...pageProps} />;
     </>
   );
+}
+
+function renderTopNavigation() {
+  return (
+    <>
+      <Avatar size="container">
+        <Image alt="profile picture" src={profilePicture} />
+      </Avatar>
+      <NavHide>
+        <Typography variant="h6" align="center">
+          Elton Okawa
+        </Typography>
+        <Typography align="center">Full Stack Developer</Typography>
+        <Typography variant="body2" align="center">
+          NodeJS | ReactJS | GCloud
+        </Typography>
+      </NavHide>
+    </>
+  );
+}
+
+function renderMiddleNavigation(pathname: string) {
+  return <>{navigation.map((data) => renderNavItem(pathname, data))}</>;
 }
 
 function renderNavItem(pathname: string, data: ItemData) {

@@ -13,6 +13,29 @@
   background-color: var(--blue-1);
   transition: var(--transition-time);
   padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 33.33%;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 33.33%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 33.33%;
 }
 
 .open {
