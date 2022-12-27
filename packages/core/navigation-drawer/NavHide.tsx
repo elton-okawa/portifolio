@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useDrawerState } from './DrawerContext';
+import styles from './styles.module.css';
 
 interface NavHideProps {
   children: ReactNode;
@@ -7,5 +8,7 @@ interface NavHideProps {
 
 export function NavHide({ children }: NavHideProps) {
   const open = useDrawerState();
-  return <>{open ? children : null}</>;
+  return (
+    <div className={open ? styles.fadeIn : ''}>{open ? children : null}</div>
+  );
 }

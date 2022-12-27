@@ -57,3 +57,8 @@
 .collapsed {
   border-radius: var(--radius-round);
 }
+
+.fadeIn {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards;
+}
