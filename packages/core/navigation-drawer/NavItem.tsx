@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { Typography } from '@elton-okawa/typography';
 import styles from './styles.module.css';
 import { useDrawerState } from './DrawerContext';
+import { NavHide } from './NavHide';
 
 export interface NavItemProps {
   icon: ReactElement;
@@ -19,7 +20,9 @@ export function NavItem(props: NavItemProps) {
       }`}
     >
       {props.icon}
-      {open && <Typography>{props.label}</Typography>}
+      <NavHide>
+        <Typography>{props.label}</Typography>
+      </NavHide>
     </div>
   );
 }
