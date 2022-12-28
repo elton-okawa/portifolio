@@ -10,7 +10,7 @@ import {
   NavItem,
   NavHide,
 } from "@elton-okawa/navigation-drawer";
-import { HomeIcon, AccountIcon } from "@elton-okawa/icons";
+import { HomeIcon, BriefcaseIcon } from "@elton-okawa/icons";
 import { Avatar } from "@elton-okawa/avatar";
 import { Typography } from "@elton-okawa/typography";
 import Image from "next/image";
@@ -30,9 +30,9 @@ const navigation: ItemData[] = [
     path: "/",
   },
   {
-    icon: AccountIcon,
-    label: "About",
-    path: "/about",
+    icon: BriefcaseIcon,
+    label: "Experience",
+    path: "/experience",
   },
 ];
 
