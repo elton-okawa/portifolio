@@ -1,6 +1,7 @@
 import React from "react";
 
 import "../styles/globals.css";
+import styles from "./App.module.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -14,6 +15,7 @@ import { Avatar } from "@elton-okawa/avatar";
 import { Typography } from "@elton-okawa/typography";
 import Image from "next/image";
 import profilePicture from "../public/profile.jpg";
+import { ContactLinks } from "../components/contact-links";
 
 type ItemData = {
   icon: typeof HomeIcon;
@@ -55,13 +57,16 @@ function renderTopNavigation() {
         <Image alt="profile picture" src={profilePicture} />
       </Avatar>
       <NavHide>
-        <Typography variant="h6" align="center">
-          Elton Okawa
-        </Typography>
-        <Typography align="center">Full Stack Developer</Typography>
-        <Typography variant="body2" align="center">
-          NodeJS | ReactJS | GCloud
-        </Typography>
+        <div className={styles.infoHide}>
+          <Typography variant="h6" align="center">
+            Elton Okawa
+          </Typography>
+          <Typography align="center">Full Stack Developer</Typography>
+          <Typography variant="body2" align="center">
+            NodeJS | ReactJS | GCloud
+          </Typography>
+          <ContactLinks />
+        </div>
       </NavHide>
     </>
   );

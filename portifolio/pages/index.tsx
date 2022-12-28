@@ -8,8 +8,7 @@ import { Avatar } from "@elton-okawa/avatar";
 import { Card } from "@elton-okawa/card";
 import { Emoji } from "@elton-okawa/emoji";
 import profilePicture from "../public/profile.jpg";
-import { GitHubIcon, LinkedinIcon } from "@elton-okawa/icons";
-import { IconButton } from "@elton-okawa/icon-button";
+import { ContactLinks } from "../components/contact-links";
 
 export default function Home() {
   return (
@@ -48,24 +47,7 @@ function renderPresentation() {
       <Typography variant="h6">
         in React, NodeJS and Google Cloud Platform
       </Typography>
-      {renderContactLinks()}
-    </div>
-  );
-}
-
-function renderContactLinks() {
-  return (
-    <div className={styles.contact}>
-      <a
-        href="https://www.linkedin.com/in/elton-okawa/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <LinkedinIcon size="large" />
-      </a>
-      <a href="https://github.com/elton-okawa" target="_blank" rel="noreferrer">
-        <GitHubIcon size="large" />
-      </a>
+      <ContactLinks />
     </div>
   );
 }
