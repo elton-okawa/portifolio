@@ -17,6 +17,7 @@
     "@elton-okawa/typography": "workspace:^0.0.0",
     "@elton-okawa/card": "workspace:^0.0.0",
     "@elton-okawa/emoji": "workspace:^0.0.0",
+    "@elton-okawa/icon-button": "workspace:^0.0.0",
     "@next/font": "13.0.7",
     "next": "13.0.7",
     "react": "18.2.0",
