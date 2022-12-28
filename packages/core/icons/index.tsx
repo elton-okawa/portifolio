@@ -3,7 +3,14 @@ import React from 'react';
 import styles from './styles.module.css';
 
 import ThirdPartyIcon from '@mdi/react';
-import { mdiHome, mdiAccount, mdiChevronRight, mdiChevronLeft } from '@mdi/js';
+import {
+  mdiHome,
+  mdiAccount,
+  mdiChevronRight,
+  mdiChevronLeft,
+  mdiLinkedin,
+  mdiGithub,
+} from '@mdi/js';
 
 export interface IconProps {
   size?: 'small' | 'medium' | 'large';
@@ -38,4 +45,10 @@ export const ChevronRightIcon = (props: IconProps) => (
 );
 export const ChevronLeftIcon = (props: IconProps) => (
   <Icon icon={mdiChevronLeft} {...props} />
+);
+export const LinkedinIcon = (props: IconProps) => (
+  <Icon icon={mdiLinkedin} {...props} />
+);
+export const GitHubIcon = (props: IconProps) => (
+  <Icon icon={mdiGithub} {...props} />
 );
