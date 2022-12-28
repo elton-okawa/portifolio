@@ -29,26 +29,28 @@ export default function Home() {
 
 function renderPresentation() {
   return (
-    <div className={styles.presentation}>
-      <div className={styles.avatar}>
-        <Avatar size="container">
-          <Image alt="profile picture" src={profilePicture} />
-        </Avatar>
+    <Card>
+      <div className={styles.presentation}>
+        <div className={styles.avatar}>
+          <Avatar size="container">
+            <Image alt="profile picture" src={profilePicture} />
+          </Avatar>
+        </div>
+        <Typography variant="h5">
+          Hello there! <Emoji label="waving">👋</Emoji>
+        </Typography>
+        <Typography variant="h3">
+          {`I'm Elton Okawa`} <Emoji label="nerd">🤓</Emoji>
+        </Typography>
+        <Typography variant="h6">
+          A Full Stack Developer with working experience
+        </Typography>
+        <Typography variant="h6">
+          in React, NodeJS and Google Cloud Platform
+        </Typography>
+        <ContactLinks />
       </div>
-      <Typography variant="h5">
-        Hello there! <Emoji label="waving">👋</Emoji>
-      </Typography>
-      <Typography variant="h3">
-        {`I'm Elton Okawa`} <Emoji label="nerd">🤓</Emoji>
-      </Typography>
-      <Typography variant="h6">
-        A Full Stack Developer with working experience
-      </Typography>
-      <Typography variant="h6">
-        in React, NodeJS and Google Cloud Platform
-      </Typography>
-      <ContactLinks />
-    </div>
+    </Card>
   );
 }
 

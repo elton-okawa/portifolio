@@ -4,16 +4,15 @@
   border-radius: var(--radius-4);
   padding: var(--radius-3);
   border-color: var(--gray-5);
+  background-color: var(--gray-0);
 }
 
 .elevated {
-  background: none;
   border: none;
   border-width: 0px;
 }
 
 .outlined {
-  background: none;
   border-width: 2px;
 }
 

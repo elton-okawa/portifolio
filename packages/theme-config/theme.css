@@ -1,7 +1,7 @@
 @import "open-props/style";
 
 :where(html) {
-  --color-primary: var(--blue-2);
+  --color-primary: var(--blue-3);
   --color-secondary: var(--orange-2);
   --color-error: var(--red-6);
   --color-warning: var(--yellow-3);
