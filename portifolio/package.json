@@ -15,6 +15,8 @@
     "@elton-okawa/navigation-drawer": "workspace:^0.0.0",
     "@elton-okawa/theme-config": "workspace:^1.0.0",
     "@elton-okawa/typography": "workspace:^0.0.0",
+    "@elton-okawa/card": "workspace:^0.0.0",
+    "@elton-okawa/emoji": "workspace:^0.0.0",
     "@next/font": "13.0.7",
     "next": "13.0.7",
     "react": "18.2.0",

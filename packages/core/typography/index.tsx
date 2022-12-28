@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 import styles from './styles.module.css';
 
@@ -26,7 +26,7 @@ type TypographyAlign =
   | 'inherit';
 
 export interface TypographyProps {
-  children?: string;
+  children?: string | ReactNode;
   variant?: TypographyVariant;
   align?: TypographyAlign;
 }
