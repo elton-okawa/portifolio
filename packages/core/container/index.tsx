@@ -10,7 +10,9 @@ export interface ContainerProps {
 
 export function Container({ size = 'medium', ...props }: ContainerProps) {
   return (
-    <div className={`${styles.container} ${styles[size]}`}>{props.children}</div>
+    <div className={`${styles.container} ${styles[size]}`}>
+      {props.children}
+    </div>
   );
 }
 

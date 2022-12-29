@@ -57,12 +57,21 @@ function renderPresentation() {
 function renderOtherPages() {
   return (
     <div className={styles.navigation}>
-      <Link href="/experience">
+      {/* TODO eventually create this page */}
+      {/* <Link href="/experience">
         <Card>
           <Typography variant="h3">
             <Emoji label="briefcase">💼</Emoji> Experience
           </Typography>
           <Typography>Read more about my professional experience</Typography>
+        </Card>
+      </Link> */}
+      <Link href="/about">
+        <Card>
+          <Typography variant="h3">
+            <Emoji label="info">🧐</Emoji> About
+          </Typography>
+          <Typography>Read more about this portifolio</Typography>
         </Card>
       </Link>
     </div>

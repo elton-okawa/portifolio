@@ -10,7 +10,7 @@ import {
   NavItem,
   NavHide,
 } from "@elton-okawa/navigation-drawer";
-import { HomeIcon, BriefcaseIcon } from "@elton-okawa/icons";
+import { HomeIcon, BriefcaseIcon, InformationIcon } from "@elton-okawa/icons";
 import { Avatar } from "@elton-okawa/avatar";
 import { Typography } from "@elton-okawa/typography";
 import Image from "next/image";
@@ -23,16 +23,25 @@ type ItemData = {
   path: string;
 };
 
-const navigation: ItemData[] = [
+const middleNavigation: ItemData[] = [
   {
     icon: HomeIcon,
     label: "Home",
     path: "/",
   },
+  // TODO eventually create this page
+  // {
+  //   icon: BriefcaseIcon,
+  //   label: "Experience",
+  //   path: "/experience",
+  // },
+];
+
+const bottomNavigation: ItemData[] = [
   {
-    icon: BriefcaseIcon,
-    label: "Experience",
-    path: "/experience",
+    icon: InformationIcon,
+    label: "About",
+    path: "/about",
   },
 ];
 
@@ -43,7 +52,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <NavigationDrawer
         top={renderTopNavigation()}
-        middle={renderMiddleNavigation(pathname)}
+        middle={renderNavigation(middleNavigation, pathname)}
+        bottom={renderNavigation(bottomNavigation, pathname)}
       />
       <Component {...pageProps} />;
     </>
@@ -72,7 +82,7 @@ function renderTopNavigation() {
   );
 }
 
-function renderMiddleNavigation(pathname: string) {
+function renderNavigation(navigation: ItemData[], pathname: string) {
   return <>{navigation.map((data) => renderNavItem(pathname, data))}</>;
 }
 
