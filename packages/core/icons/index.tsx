@@ -11,6 +11,7 @@ import {
   mdiLinkedin,
   mdiGithub,
   mdiBriefcase,
+  mdiInformation,
 } from '@mdi/js';
 
 export interface IconProps {
@@ -55,4 +56,7 @@ export const GitHubIcon = (props: IconProps) => (
 );
 export const BriefcaseIcon = (props: IconProps) => (
   <Icon icon={mdiBriefcase} {...props} />
+);
+export const InformationIcon = (props: IconProps) => (
+  <Icon icon={mdiInformation} {...props} />
 );
