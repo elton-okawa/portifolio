@@ -3,6 +3,7 @@ import React from "react";
 import "../styles/globals.css";
 import styles from "./App.module.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import {
@@ -50,6 +51,12 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>Portifolio - Elton Okawa</title>
+        <meta name="description" content="Elton Okawa's portifolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavigationDrawer
         top={renderTopNavigation()}
         middle={renderNavigation(middleNavigation, pathname)}
