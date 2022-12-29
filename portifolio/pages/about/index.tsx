@@ -1,6 +1,6 @@
 import Container from "@elton-okawa/container";
 import React from "react";
-import { getDocsHtmlMarkdown } from "../lib/docs";
+import { getDocsHtmlMarkdown } from "../../lib/docs";
 import styles from "./styles.module.css";
 
 export async function getStaticProps() {

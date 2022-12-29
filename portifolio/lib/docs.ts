@@ -8,7 +8,7 @@ import rehypeStringify from "rehype-stringify";
 
 const docsDirectory = path.join(process.cwd(), "..", "docs");
 
-export async function getDocsHtmlMarkdown(filename: string) {
+export async function getDocsHtmlMarkdown(filename: string): Promise<string> {
   const data = fs.readFileSync(path.join(docsDirectory, `${filename}.md`));
   const processed = await unified()
     .use(remarkParse)
