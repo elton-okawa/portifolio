@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.small {
+  max-width: 540px;
+}
+
+.medium {
+  max-width: 720px;
+}
+
+.large {
+  max-width: 960px;
+}
