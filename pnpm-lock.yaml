@@ -40,9 +40,12 @@ importers:
 
   packages/core/avatar:
     specifiers:
+      '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@types/react': 18.0.26
+    dependencies:
+      '@elton-okawa/commons': link:../commons
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
       '@elton-okawa/prettier-config': link:../../prettier-config
