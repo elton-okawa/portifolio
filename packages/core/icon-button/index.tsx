@@ -1,4 +1,6 @@
 import React, { ReactNode } from 'react';
+import { mergeClassNames } from '@elton-okawa/commons';
+
 import styles from './styles.module.css';
 
 export type IconButtonVariant = 'text' | 'filled';
@@ -12,7 +14,7 @@ export interface IconButtonProps {
 export function IconButton({ variant = 'filled', ...props }: IconButtonProps) {
   return (
     <button
-      className={`${styles.button} ${styles[variant]}`}
+      className={mergeClassNames(styles.button, styles[variant])}
       onClick={() => props.onClick()}
     >
       {props.children}

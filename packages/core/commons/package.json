@@ -1,5 +1,5 @@
 {
-  "name": "@elton-okawa/avatar",
+  "name": "@elton-okawa/commons",
   "version": "0.0.0",
   "private": true,
   "main": "./index.tsx",
@@ -10,13 +10,6 @@
   },
   "devDependencies": {
     "@elton-okawa/eslint-config-react": "workspace:^1.0.0",
-    "@elton-okawa/prettier-config": "workspace:^1.0.0",
-    "@types/react": "18.0.26"
-  },
-  "peerDependencies": {
-    "react": "^18"
-  },
-  "dependencies": {
-    "@elton-okawa/commons": "workspace:^0.0.0"
+    "@elton-okawa/prettier-config": "workspace:^1.0.0"
   }
 }

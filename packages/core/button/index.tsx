@@ -1,4 +1,6 @@
 import React from 'react';
+import { mergeClassNames } from '@elton-okawa/commons';
+
 import styles from './styles.module.css';
 
 export type ButtonVariant = 'text' | 'outlined' | 'filled';
@@ -12,7 +14,7 @@ export interface ButtonProps {
 export function Button({ variant = 'text', ...props }: ButtonProps) {
   return (
     <button
-      className={`${styles.button} ${styles[variant]}`}
+      className={mergeClassNames(styles.button, styles[variant])}
       onClick={() => props.onClick()}
     >
       {props.children}

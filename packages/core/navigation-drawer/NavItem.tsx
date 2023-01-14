@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Typography } from '@elton-okawa/typography';
+import { mergeClassNames } from '@elton-okawa/commons';
 import styles from './styles.module.css';
 import { useDrawerState } from './DrawerContext';
 import { NavHide } from './NavHide';
@@ -15,9 +16,11 @@ export function NavItem(props: NavItemProps) {
 
   return (
     <div
-      className={`${styles.navItem} ${props.selected ? styles.selected : ''} ${
+      className={mergeClassNames(
+        styles.navItem,
+        props.selected ? styles.selected : '',
         !open ? styles.collapsed : ''
-      }`}
+      )}
     >
       {props.icon}
       <NavHide>

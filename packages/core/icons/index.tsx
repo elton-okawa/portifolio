@@ -1,4 +1,5 @@
 import React from 'react';
+import { mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -31,7 +32,7 @@ export function Icon({
   return (
     <ThirdPartyIcon
       path={icon}
-      className={`${styles[size]} ${styles[color]}`}
+      className={mergeClassNames(styles[size], styles[color])}
     />
   );
 }
