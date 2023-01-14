@@ -1,4 +1,6 @@
 import React, { ReactNode } from 'react';
+import { mergeClassNames } from '@elton-okawa/commons';
+
 import styles from './styles.module.css';
 
 export type CardVariant = 'elevated' | 'filled' | 'outlined';
@@ -10,7 +12,9 @@ export interface CardProps {
 
 export function Card({ variant = 'elevated', ...props }: CardProps) {
   return (
-    <div className={`${styles.card} ${styles[variant]}`}>{props.children}</div>
+    <div className={mergeClassNames(styles.card, styles[variant])}>
+      {props.children}
+    </div>
   );
 }
 

@@ -15,5 +15,8 @@
   },
   "peerDependencies": {
     "react": "^18"
+  },
+  "dependencies": {
+    "@elton-okawa/commons": "workspace:^0.0.0"
   }
 }
