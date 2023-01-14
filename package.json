@@ -7,10 +7,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter portifolio dev",
-    "lint": "pnpm -r lint",
-    "format": "pnpm -r format",
+    "lint": "pnpm --filter '...[origin/main]' lint",
+    "format": "pnpm --filter '...[origin/main]' format",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
