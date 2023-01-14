@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -55,7 +56,7 @@ export function Typography({
   const Component = htmlVariantMapping[variant] as React.ElementType;
 
   return (
-    <Component className={`${styles[variant]} ${styles[align]}`}>
+    <Component className={mergeClassNames(styles[variant], styles[align])}>
       {children}
     </Component>
   );

@@ -171,11 +171,14 @@ importers:
 
   packages/core/typography:
     specifiers:
+      '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@types/react': 18.0.26
       open-props: ^1.5.3
+    dependencies:
+      '@elton-okawa/commons': link:../commons
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
       '@elton-okawa/prettier-config': link:../../prettier-config
