@@ -14,6 +14,7 @@
     "@elton-okawa/card": "workspace:^0.0.0",
     "@elton-okawa/container": "workspace:^0.0.0",
     "@elton-okawa/emoji": "workspace:^0.0.0",
+    "@elton-okawa/flex": "workspace:^0.0.0",
     "@elton-okawa/icon-button": "workspace:^0.0.0",
     "@elton-okawa/icons": "workspace:^0.0.0",
     "@elton-okawa/navigation-drawer": "workspace:^0.0.0",
