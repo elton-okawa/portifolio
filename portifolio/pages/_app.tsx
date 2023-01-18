@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../styles/globals.css";
-import styles from "./App.module.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -11,9 +10,10 @@ import {
   NavItem,
   NavHide,
 } from "@elton-okawa/navigation-drawer";
-import { HomeIcon, BriefcaseIcon, InformationIcon } from "@elton-okawa/icons";
+import { HomeIcon, InformationIcon } from "@elton-okawa/icons";
 import { Avatar } from "@elton-okawa/avatar";
 import { Typography } from "@elton-okawa/typography";
+import { Flex } from "@elton-okawa/flex";
 import Image from "next/image";
 import profilePicture from "../public/profile.jpg";
 import { ContactLinks } from "../components/contact-links";
@@ -74,7 +74,7 @@ function renderTopNavigation() {
         <Image alt="profile picture" src={profilePicture} />
       </Avatar>
       <NavHide>
-        <div className={styles.infoHide}>
+        <Flex direction="column" alignItems="center" gap={1}>
           <Typography variant="h6" align="center">
             Elton Okawa
           </Typography>
@@ -83,7 +83,7 @@ function renderTopNavigation() {
             NodeJS | ReactJS | GCloud
           </Typography>
           <ContactLinks />
-        </div>
+        </Flex>
       </NavHide>
     </>
   );

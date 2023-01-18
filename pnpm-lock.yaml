@@ -234,6 +234,7 @@ importers:
       '@elton-okawa/container': workspace:^0.0.0
       '@elton-okawa/emoji': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/flex': workspace:^0.0.0
       '@elton-okawa/icon-button': workspace:^0.0.0
       '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
@@ -260,6 +261,7 @@ importers:
       '@elton-okawa/card': link:../packages/core/card
       '@elton-okawa/container': link:../packages/core/container
       '@elton-okawa/emoji': link:../packages/core/emoji
+      '@elton-okawa/flex': link:../packages/core/flex
       '@elton-okawa/icon-button': link:../packages/core/icon-button
       '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
