@@ -6,6 +6,7 @@ import Typography from "@elton-okawa/typography";
 import { Avatar } from "@elton-okawa/avatar";
 import { Card } from "@elton-okawa/card";
 import { Emoji } from "@elton-okawa/emoji";
+import { Flex } from "@elton-okawa/flex";
 import profilePicture from "../public/profile.jpg";
 import { ContactLinks } from "../components/contact-links";
 
@@ -23,7 +24,7 @@ export default function Home() {
 function renderPresentation() {
   return (
     <Card>
-      <div className={styles.presentation}>
+      <Flex direction="column">
         <div className={styles.avatar}>
           <Avatar size="container">
             <Image alt="profile picture" src={profilePicture} />
@@ -42,7 +43,7 @@ function renderPresentation() {
           in React, NodeJS and Google Cloud Platform
         </Typography>
         <ContactLinks />
-      </div>
+      </Flex>
     </Card>
   );
 }
