@@ -1,5 +1,9 @@
 import React, { ReactNode } from 'react';
-import { mergeClassNames, styleOrEmpty } from '@elton-okawa/commons';
+import {
+  ExtraProps,
+  mergeClassNames,
+  styleOrEmpty,
+} from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -49,8 +53,9 @@ export function Flex({
   gap,
   columnGap,
   rowGap,
+  extraClass,
   ...props
-}: FlexProps) {
+}: FlexProps & ExtraProps) {
   const directionClass = styleOrEmpty(styles, 'direction', direction);
   const wrapClass = styleOrEmpty(styles, 'wrap', wrap);
   const justifyContentClass = styleOrEmpty(styles, 'justify', justifyContent);
@@ -63,6 +68,7 @@ export function Flex({
   return (
     <div
       className={mergeClassNames(
+        extraClass,
         styles.flex,
         directionClass,
         wrapClass,
