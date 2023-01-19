@@ -17,11 +17,6 @@
   display: flex;
 }
 
-.presentation {
-  display: flex;
-  flex-direction: column;
-}
-
 .contact {
   margin-top: 10px;
   display: flex;

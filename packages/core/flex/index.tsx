@@ -1,5 +1,9 @@
 import React, { ReactNode } from 'react';
-import { mergeClassNames } from '@elton-okawa/commons';
+import {
+  ExtraProps,
+  mergeClassNames,
+  styleOrEmpty,
+} from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -49,24 +53,22 @@ export function Flex({
   gap,
   columnGap,
   rowGap,
+  extraClasses = [],
   ...props
-}: FlexProps) {
-  const directionClass = direction ? styles[`direction-${direction}`] : '';
-  const wrapClass = wrap ? styles[`wrap-${wrap}`] : '';
-  const justifyContentClass = justifyContent
-    ? styles[`justify-${justifyContent}`]
-    : '';
-  const alignItemsClass = alignItems ? styles[`align-items-${alignItems}`] : '';
-  const alignContentClass = alignContent
-    ? styles[`align-content-${alignContent}`]
-    : '';
-  const gapClass = gap ? styles[`gap-${gap}`] : '';
-  const columnGapClass = columnGap ? styles[`column-gap-${columnGap}`] : '';
-  const rowGapClass = rowGap ? styles[`row-gap-${rowGap}`] : '';
+}: FlexProps & ExtraProps) {
+  const directionClass = styleOrEmpty(styles, 'direction', direction);
+  const wrapClass = styleOrEmpty(styles, 'wrap', wrap);
+  const justifyContentClass = styleOrEmpty(styles, 'justify', justifyContent);
+  const alignItemsClass = styleOrEmpty(styles, 'align-items', alignItems);
+  const alignContentClass = styleOrEmpty(styles, 'align-content', alignContent);
+  const gapClass = styleOrEmpty(styles, 'gap', gap);
+  const columnGapClass = styleOrEmpty(styles, 'column-gap', columnGap);
+  const rowGapClass = styleOrEmpty(styles, 'row-gap', rowGap);
 
   return (
     <div
       className={mergeClassNames(
+        ...extraClasses,
         styles.flex,
         directionClass,
         wrapClass,
