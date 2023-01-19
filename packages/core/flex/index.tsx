@@ -53,7 +53,7 @@ export function Flex({
   gap,
   columnGap,
   rowGap,
-  extraClass,
+  extraClasses = [],
   ...props
 }: FlexProps & ExtraProps) {
   const directionClass = styleOrEmpty(styles, 'direction', direction);
@@ -68,7 +68,7 @@ export function Flex({
   return (
     <div
       className={mergeClassNames(
-        extraClass,
+        ...extraClasses,
         styles.flex,
         directionClass,
         wrapClass,
