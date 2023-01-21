@@ -1,3 +1,4 @@
 packages:
-  - 'portifolio'
-  - 'packages/**'
+  - "portifolio"
+  - "api"
+  - "packages/**"
