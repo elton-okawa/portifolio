@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@babel/core': ^7.20.7
+      '@elton-okawa/eslint-config-node': workspace:^1.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@storybook/addon-essentials': ^7.0.0-beta.13
       '@storybook/addon-interactions': ^7.0.0-beta.13
@@ -22,6 +23,7 @@ importers:
       webpack: ^5.75.0
     devDependencies:
       '@babel/core': 7.20.7
+      '@elton-okawa/eslint-config-node': link:packages/eslint-config-node
       '@elton-okawa/theme-config': link:packages/theme-config
       '@storybook/addon-essentials': 7.0.0-beta.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-interactions': 7.0.0-beta.13_biqbaboplfbrettd7655fr4n2y
@@ -40,6 +42,7 @@ importers:
 
   api:
     specifiers:
+      '@elton-okawa/websocket-chat': workspace:^0.0.0
       '@nestjs/cli': ^9.0.0
       '@nestjs/common': ^9.0.0
       '@nestjs/config': ^2.2.0
@@ -72,6 +75,7 @@ importers:
       typescript: ^4.7.4
       webpack: ^5.75.0
     dependencies:
+      '@elton-okawa/websocket-chat': link:../packages/shared/websocket-chat
       '@nestjs/common': 9.2.1_mnr6j2del53muneqly5h4y27ai
       '@nestjs/config': 2.2.0_b4pxbpa7chblgbyake5iz5rdmu
       '@nestjs/core': 9.2.1_w3aokaw6dj62wscfwgppttd7ii
@@ -287,6 +291,12 @@ importers:
     dependencies:
       prettier: 2.8.1
 
+  packages/shared/websocket-chat:
+    specifiers:
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+    devDependencies:
+      '@elton-okawa/prettier-config': link:../../prettier-config
+
   packages/theme-config:
     specifiers:
       open-props: ^1.5.3
@@ -307,6 +317,7 @@ importers:
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@elton-okawa/typography': workspace:^0.0.0
+      '@elton-okawa/websocket-chat': workspace:^0.0.0
       '@next/font': 13.0.7
       '@types/node': 18.11.17
       '@types/react': 18.0.26
@@ -320,6 +331,7 @@ importers:
       rehype-stringify: ^9.0.3
       remark-parse: ^10.0.1
       remark-rehype: ^10.1.0
+      socket.io-client: ^4.5.4
       typescript: ^4.9.4
       unified: ^10.1.2
     dependencies:
@@ -334,6 +346,7 @@ importers:
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/theme-config': link:../packages/theme-config
       '@elton-okawa/typography': link:../packages/core/typography
+      '@elton-okawa/websocket-chat': link:../packages/shared/websocket-chat
       '@next/font': 13.0.7
       next: 13.0.7_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
@@ -342,6 +355,7 @@ importers:
       rehype-stringify: 9.0.3
       remark-parse: 10.0.1
       remark-rehype: 10.1.0
+      socket.io-client: 4.5.4
       unified: 10.1.2
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../packages/eslint-config-react
@@ -6131,6 +6145,20 @@ packages:
       objectorarray: 1.0.5
     dev: true
 
+  /engine.io-client/6.2.3:
+    resolution: {integrity: sha512-aXPtgF1JS3RuuKcpSrBtimSjYvrbhKW9froICH4s0F3XQWLxsKNxqzG39nnvQZQnva4CMvUK63T7shevxRyYHw==}
+    dependencies:
+      '@socket.io/component-emitter': 3.1.0
+      debug: 4.3.4
+      engine.io-parser: 5.0.6
+      ws: 8.2.3
+      xmlhttprequest-ssl: 2.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: false
+
   /engine.io-parser/5.0.6:
     resolution: {integrity: sha512-tjuoZDMAdEhVnSFleYPCtdL2GXwVTGtNjoeJd9IhIG3C1xs9uwxqRNEu5WpnDZCaozwVlK/nuQhpodhXSIMaxw==}
     engines: {node: '>=10.0.0'}
@@ -10659,6 +10687,20 @@ packages:
   /socket.io-adapter/2.4.0:
     resolution: {integrity: sha512-W4N+o69rkMEGVuk2D/cvca3uYsvGlMwsySWV447y99gUPghxq42BxqLNMndb+a1mm/5/7NeXVQS7RLa2XyXvYg==}
 
+  /socket.io-client/4.5.4:
+    resolution: {integrity: sha512-ZpKteoA06RzkD32IbqILZ+Cnst4xewU7ZYK12aS1mzHftFFjpoMz69IuhP/nL25pJfao/amoPI527KnuhFm01g==}
+    engines: {node: '>=10.0.0'}
+    dependencies:
+      '@socket.io/component-emitter': 3.1.0
+      debug: 4.3.4
+      engine.io-client: 6.2.3
+      socket.io-parser: 4.2.2
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    dev: false
+
   /socket.io-parser/4.2.2:
     resolution: {integrity: sha512-DJtziuKypFkMMHCm2uIshOYC7QaylbtzQwiMYDuCKy3OPkjLzu4B2vAhTlqipRHHzrI0NJeBAizTK7X+6m1jVw==}
     engines: {node: '>=10.0.0'}
@@ -11885,6 +11927,11 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+
+  /xmlhttprequest-ssl/2.0.0:
+    resolution: {integrity: sha512-QKxVRxiRACQcVuQEYFsI1hhkrMlrXHPegbbd1yn9UHOmRxY+si12nQYzri3vbzt8VdTTRviqcKxcyllFas5z2A==}
+    engines: {node: '>=0.4.0'}
+    dev: false
 
   /xtend/4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
