@@ -12,6 +12,7 @@
     "@elton-okawa/avatar": "workspace:^0.0.0",
     "@elton-okawa/button": "workspace:^0.0.0",
     "@elton-okawa/card": "workspace:^0.0.0",
+    "@elton-okawa/commons": "workspace:^0.0.0",
     "@elton-okawa/container": "workspace:^0.0.0",
     "@elton-okawa/emoji": "workspace:^0.0.0",
     "@elton-okawa/flex": "workspace:^0.0.0",
@@ -20,6 +21,7 @@
     "@elton-okawa/navigation-drawer": "workspace:^0.0.0",
     "@elton-okawa/theme-config": "workspace:^1.0.0",
     "@elton-okawa/typography": "workspace:^0.0.0",
+    "@elton-okawa/websocket-chat": "workspace:^0.0.0",
     "@next/font": "13.0.7",
     "next": "13.0.7",
     "react": "18.2.0",
@@ -28,6 +30,7 @@
     "rehype-stringify": "^9.0.3",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
+    "socket.io-client": "^4.5.4",
     "unified": "^10.1.2"
   },
   "devDependencies": {

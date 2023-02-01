@@ -8,14 +8,14 @@ import {
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 import { ChatService } from './chat.service';
+import { SocketData } from './chat.events';
 import {
   ServerToClientEvents,
   ClientToServerEvents,
   InterEvents,
-  SocketData,
-} from './chat.events';
+} from '@elton-okawa/websocket-chat';
 
-@WebSocketGateway({ namespace: 'chat' })
+@WebSocketGateway({ namespace: 'chat', cors: true })
 export class ChatGateway implements OnGatewayConnection<Socket> {
   @WebSocketServer()
   private server: Server<
@@ -47,6 +47,7 @@ export class ChatGateway implements OnGatewayConnection<Socket> {
     @MessageBody() data: string,
   ) {
     // TODO save
+    console.log(data);
     this.server.emit('message', data, client.data.name, new Date());
   }
 }

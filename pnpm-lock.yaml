@@ -270,6 +270,21 @@ importers:
       '@types/react': 18.0.26
       open-props: 1.5.3
 
+  packages/eslint-config-node:
+    specifiers:
+      '@typescript-eslint/eslint-plugin': ^5.47.0
+      '@typescript-eslint/parser': ^5.47.0
+      eslint: ^8.30.0
+      eslint-config-prettier: ^8.5.0
+      typescript: '*'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
+      '@typescript-eslint/parser': 5.47.0_lzzuuodtsqwxnvqeq4g4likcqa
+      eslint: 8.30.0
+      eslint-config-prettier: 8.5.0_eslint@8.30.0
+    devDependencies:
+      typescript: 4.9.4
+
   packages/eslint-config-react:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.47.0
@@ -308,6 +323,7 @@ importers:
       '@elton-okawa/avatar': workspace:^0.0.0
       '@elton-okawa/button': workspace:^0.0.0
       '@elton-okawa/card': workspace:^0.0.0
+      '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/container': workspace:^0.0.0
       '@elton-okawa/emoji': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
@@ -338,6 +354,7 @@ importers:
       '@elton-okawa/avatar': link:../packages/core/avatar
       '@elton-okawa/button': link:../packages/core/button
       '@elton-okawa/card': link:../packages/core/card
+      '@elton-okawa/commons': link:../packages/core/commons
       '@elton-okawa/container': link:../packages/core/container
       '@elton-okawa/emoji': link:../packages/core/emoji
       '@elton-okawa/flex': link:../packages/core/flex
