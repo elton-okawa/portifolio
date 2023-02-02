@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { Message } from "@elton-okawa/websocket-chat";
 import MessageItem from "./MessageItem";
+import MessageInput from './MessageInput';
 
 const webSocketUrl = "http://localhost:8080/chat";
 
@@ -27,21 +28,13 @@ export default function Chat() {
     };
   }, []);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const formData = new FormData(form);
-    console.log(formData.get("message"));
-    socket.emit("message", formData.get("message"));
+  function handleSubmit(message) {
+    socket.emit("message", message);
   }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input id="message" name="message" />
-        <input type="submit" />
-      </form>
+      <MessageInput onSubmit={handleSubmit} />
       {messages.map((message, index) => (
         <MessageItem key={index} message={message} owner={index % 2 === 0}/>
       ))}
