@@ -330,6 +330,7 @@ importers:
       '@elton-okawa/flex': workspace:^0.0.0
       '@elton-okawa/icon-button': workspace:^0.0.0
       '@elton-okawa/icons': workspace:^0.0.0
+      '@elton-okawa/input': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@elton-okawa/typography': workspace:^0.0.0
@@ -360,6 +361,7 @@ importers:
       '@elton-okawa/flex': link:../packages/core/flex
       '@elton-okawa/icon-button': link:../packages/core/icon-button
       '@elton-okawa/icons': link:../packages/core/icons
+      '@elton-okawa/input': link:../packages/core/input
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/theme-config': link:../packages/theme-config
       '@elton-okawa/typography': link:../packages/core/typography

@@ -18,6 +18,7 @@
     "@elton-okawa/flex": "workspace:^0.0.0",
     "@elton-okawa/icon-button": "workspace:^0.0.0",
     "@elton-okawa/icons": "workspace:^0.0.0",
+    "@elton-okawa/input": "workspace:^0.0.0",
     "@elton-okawa/navigation-drawer": "workspace:^0.0.0",
     "@elton-okawa/theme-config": "workspace:^1.0.0",
     "@elton-okawa/typography": "workspace:^0.0.0",

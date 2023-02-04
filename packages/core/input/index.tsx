@@ -1,5 +1,5 @@
 import React from 'react';
-import { mergeClassNames } from '@elton-okawa/commons';
+import { ExtraProps, mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -9,8 +9,8 @@ export interface InputProps {
   name?: string;
 }
 
-export function Input({ ...props }: InputProps) {
-  return <input className={mergeClassNames(styles.input)} {...props} />;
+export function Input({ extraClasses = [], ...props }: InputProps & ExtraProps) {
+  return <input className={mergeClassNames(styles.input, ...extraClasses)} {...props} />;
 }
 
 export default Input;

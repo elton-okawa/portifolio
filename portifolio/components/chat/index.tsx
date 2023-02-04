@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { Message } from "@elton-okawa/websocket-chat";
+import { Flex } from '@elton-okawa/flex';
 import MessageItem from "./MessageItem";
 import MessageInput from './MessageInput';
+import styles from './styles.module.css';
 
 const webSocketUrl = "http://localhost:8080/chat";
 
@@ -33,11 +35,13 @@ export default function Chat() {
   }
 
   return (
-    <div>
-      <MessageInput onSubmit={handleSubmit} />
-      {messages.map((message, index) => (
-        <MessageItem key={index} message={message} owner={index % 2 === 0}/>
-      ))}
-    </div>
+    <Flex direction='column' extraClasses={[styles.chatContainer]}>
+      <div className={styles.messagesContainer}>
+        {messages.map((message, index) => (
+          <MessageItem key={index} message={message} owner={index % 2 === 0}/>
+        ))}
+      </div>
+      <MessageInput onSubmit={handleSubmit}/>
+    </Flex>
   );
 }
