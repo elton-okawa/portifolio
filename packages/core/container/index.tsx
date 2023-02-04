@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { mergeClassNames } from '@elton-okawa/commons';
+import { ExtraProps, mergeClassNames } from '@elton-okawa/commons';
 import styles from './styles.module.css';
 
 type ContainerSize = 'small' | 'medium' | 'large';
@@ -9,10 +9,22 @@ export interface ContainerProps {
   children: ReactNode;
 }
 
-export function Container({ size = 'medium', ...props }: ContainerProps) {
+export function Container({
+  size = 'medium',
+  children,
+  extraClasses = [],
+  ...props
+}: ContainerProps & ExtraProps) {
   return (
-    <div className={mergeClassNames(styles.container, styles[size])}>
-      {props.children}
+    <div
+      className={mergeClassNames(
+        styles.container,
+        styles[size],
+        ...extraClasses
+      )}
+      {...props}
+    >
+      {children}
     </div>
   );
 }
