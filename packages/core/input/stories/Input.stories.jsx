@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Input } from '../index';
 
@@ -8,7 +8,9 @@ export default {
 };
 
 const Template = (args) => {
-  return <Input {...args} />;
+  const [value, setValue] = useState('');
+
+  return <Input value={value} onChange={setValue} {...args} />;
 };
 
 export const Default = Template.bind({});
