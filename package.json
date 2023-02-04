@@ -7,8 +7,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter portifolio --filter api start:dev",
-    "lint": "pnpm --filter '...[origin/main]' lint",
-    "format": "pnpm --filter '...[origin/main]' format",
+    "lint": "pnpm --filter '...[HEAD^]' lint",
+    "format": "pnpm --filter '...[HEAD^]' format",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install"
