@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 export type ButtonVariant = 'text' | 'outlined' | 'filled';
 
 export interface ButtonProps {
-  variant: ButtonVariant;
+  variant?: ButtonVariant;
   children: string;
   onClick: () => void;
 }
