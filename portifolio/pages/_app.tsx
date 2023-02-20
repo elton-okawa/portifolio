@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import {
   NavigationDrawer,
   NavItem,
   NavHide,
-} from "@elton-okawa/navigation-drawer";
-import { HomeIcon, InformationIcon } from "@elton-okawa/icons";
-import { Avatar } from "@elton-okawa/avatar";
-import { Typography } from "@elton-okawa/typography";
-import { Flex } from "@elton-okawa/flex";
-import Image from "next/image";
-import profilePicture from "../public/profile.jpg";
-import { ContactLinks } from "../components/contact-links";
+} from '@elton-okawa/navigation-drawer';
+import { HomeIcon, InformationIcon } from '@elton-okawa/icons';
+import { Avatar } from '@elton-okawa/avatar';
+import { Typography } from '@elton-okawa/typography';
+import { Flex } from '@elton-okawa/flex';
+import Image from 'next/image';
+import profilePicture from '../public/profile.jpg';
+import { ContactLinks } from '../components/contact-links';
+import { wrapper } from './stores/store';
 
 type ItemData = {
   icon: typeof HomeIcon;
@@ -27,8 +28,8 @@ type ItemData = {
 const middleNavigation: ItemData[] = [
   {
     icon: HomeIcon,
-    label: "Home",
-    path: "/",
+    label: 'Home',
+    path: '/',
   },
   // TODO eventually create this page
   // {
@@ -41,12 +42,12 @@ const middleNavigation: ItemData[] = [
 const bottomNavigation: ItemData[] = [
   {
     icon: InformationIcon,
-    label: "About",
-    path: "/about",
+    label: 'About',
+    path: '/about',
   },
 ];
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const { pathname } = useRouter();
 
   return (
@@ -105,3 +106,5 @@ function renderNavItem(pathname: string, data: ItemData) {
     </Link>
   );
 }
+
+export default wrapper.withRedux(App);

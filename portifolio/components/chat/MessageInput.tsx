@@ -18,16 +18,22 @@ export default function MessageInput({ onSubmit }: MessageInputProps) {
 
     onSubmit(message);
     setMessage('');
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
       <Flex gap={1}>
-        <Input id="message" name="message" value={message} onChange={setMessage} extraClasses={[styles.messageInput]}/>
-        <IconButton type='submit'>
+        <Input
+          id="message"
+          name="message"
+          value={message}
+          onChange={setMessage}
+          extraClasses={[styles.messageInput]}
+        />
+        <IconButton type="submit">
           <SendIcon />
         </IconButton>
       </Flex>
     </form>
-  )
+  );
 }
