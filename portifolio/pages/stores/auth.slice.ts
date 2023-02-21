@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { AppState } from './store';
+import { LoginResponse } from '@elton-okawa/types';
 
 export interface AuthState {
   logging: boolean;
@@ -20,17 +21,19 @@ export const authSlice = createSlice({
   reducers: {
     loginStarted(state, action) {
       state.logging = true;
-      console.log('login');
     },
 
     loginSuccessfully(state, action) {
+      axios.defaults.headers.common[
+        'Authorization'
+      ] = `Bearer ${action.payload.accessToken}`;
       state.logging = false;
       state.loggedIn = true;
     },
 
     loginFailed(state, action) {
       state.logging = false;
-      state.error = 'Logging failed';
+      state.error = action.payload;
     },
   },
 });
@@ -44,10 +47,13 @@ export const requestLogin =
   (username: string, password: string) => async (dispatch, getState) => {
     dispatch(loginStarted(null));
     try {
-      await axios.post('/auth/login', { username, password });
-      dispatch(loginSuccessfully(null));
+      const response = await axios.post<LoginResponse>('/auth/login', {
+        username,
+        password,
+      });
+      dispatch(loginSuccessfully(response.data));
     } catch (error) {
       console.error(error);
-      dispatch(loginFailed(null));
+      dispatch(loginFailed(error.message));
     }
   };

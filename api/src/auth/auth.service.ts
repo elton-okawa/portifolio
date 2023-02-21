@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { SafeUser, UsersService } from 'src/users/users.service';
+import { LoginResponse } from '@elton-okawa/types';
 
 export interface JwtPayload {
   username: string;
@@ -27,7 +28,7 @@ export class AuthService {
     return null;
   }
 
-  async login(user: SafeUser) {
+  async login(user: SafeUser): Promise<LoginResponse> {
     const payload: JwtPayload = {
       username: user.username,
       sub: user.id,
