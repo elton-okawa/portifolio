@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 import { AppState } from './store';
 
 export interface AuthState {
@@ -43,7 +44,7 @@ export const requestLogin =
   (username: string, password: string) => async (dispatch, getState) => {
     dispatch(loginStarted(null));
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      await axios.post('/auth/login', { username, password });
       dispatch(loginSuccessfully(null));
     } catch (error) {
       console.error(error);
