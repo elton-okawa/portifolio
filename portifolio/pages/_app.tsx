@@ -17,7 +17,8 @@ import { Flex } from '@elton-okawa/flex';
 import Image from 'next/image';
 import profilePicture from '../public/profile.jpg';
 import { ContactLinks } from '../components/contact-links';
-import { wrapper } from './stores/store';
+import { AuthGuard } from '../components/auth';
+import { wrapper } from '../stores/store';
 
 import axios from 'axios';
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
@@ -66,7 +67,9 @@ function App({ Component, pageProps }: AppProps) {
         middle={renderNavigation(middleNavigation, pathname)}
         bottom={renderNavigation(bottomNavigation, pathname)}
       />
-      <Component {...pageProps} />;
+      <AuthGuard>
+        <Component {...pageProps} />;
+      </AuthGuard>
     </>
   );
 }

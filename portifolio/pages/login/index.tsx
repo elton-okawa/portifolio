@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 import Flex from '@elton-okawa/flex';
 import Button from '@elton-okawa/button';
 import Typography from '@elton-okawa/typography';
-import { selectAuthState, requestLogin } from '../stores/auth.slice';
+import { selectAuthState, requestLogin } from '../../stores/auth.slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const fakeAccounts = [

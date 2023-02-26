@@ -381,6 +381,7 @@ importers:
       '@elton-okawa/input': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@elton-okawa/progress': workspace:^0.0.0
       '@elton-okawa/theme-config': workspace:^1.0.0
       '@elton-okawa/types': workspace:^0.0.0
       '@elton-okawa/typography': workspace:^0.0.0
@@ -418,6 +419,7 @@ importers:
       '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/input': link:../packages/core/input
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
+      '@elton-okawa/progress': link:../packages/core/progress
       '@elton-okawa/theme-config': link:../packages/theme-config
       '@elton-okawa/typography': link:../packages/core/typography
       '@elton-okawa/websocket-chat': link:../packages/shared/websocket-chat

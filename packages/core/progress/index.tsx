@@ -17,5 +17,3 @@ export function CircularProgress({ size = 'medium' }: CircularProgressProps) {
     </svg>
   );
 }
-
-export default CircularProgress;
