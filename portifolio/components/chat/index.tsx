@@ -23,7 +23,7 @@ export default function Chat() {
       },
     });
 
-    socket.on('connect', () => console.log('connected'));
+    socket.on('connect', (data) => console.log(data));
     socket.on('disconnect', () => console.log('disconnected'));
     socket.on('message', (content: string, owner: string, date: string) => {
       setMessages((current) => [

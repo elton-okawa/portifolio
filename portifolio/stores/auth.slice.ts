@@ -50,7 +50,7 @@ export const requestLogin =
   (username: string, password: string) => async (dispatch, getState) => {
     dispatch(loginStarted(null));
     try {
-      const response = await axios.post<LoginResponse>('/auth/login', {
+      const response = await axios.post<LoginResponse>('/api/auth/login', {
         username,
         password,
       });

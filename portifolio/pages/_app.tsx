@@ -20,9 +20,6 @@ import { ContactLinks } from '../components/contact-links';
 import { AuthGuard } from '../components/auth';
 import { wrapper } from '../stores/store';
 
-import axios from 'axios';
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
-
 type ItemData = {
   icon: typeof HomeIcon;
   label: string;

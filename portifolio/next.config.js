@@ -6,6 +6,14 @@ const nextConfig = {
     // https://github.com/vercel/next.js/issues/9474
     externalDir: true,
   },
+  rewrites: async () => {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${process.env.API_URL}/:path*`,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
