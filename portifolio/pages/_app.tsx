@@ -35,6 +35,11 @@ const middleNavigation: ItemData[] = [
     label: 'Home',
     path: '/',
   },
+  {
+    icon: HomeIcon,
+    label: 'Chat',
+    path: '/chat',
+  },
   // TODO eventually create this page
   // {
   //   icon: BriefcaseIcon,

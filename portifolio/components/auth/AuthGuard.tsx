@@ -15,18 +15,18 @@ export interface AuthGuardProps {
 
 export function AuthGuard({ children }: AuthGuardProps) {
   const router = useRouter();
-  const isAuthenticated = useSelector(selectAuthState);
+  const { loggedIn } = useSelector(selectAuthState);
   const isPublicRoute = !!publicRoutes.find(
     (route) => route === router.pathname
   );
 
   useEffect(() => {
-    if (!isPublicRoute && !isAuthenticated) {
+    if (!isPublicRoute && !loggedIn) {
       router.push('./login');
     }
-  }, [router, isAuthenticated, isPublicRoute]);
+  }, [router, loggedIn, isPublicRoute]);
 
-  if (!isPublicRoute && !isAuthenticated) {
+  if (!isPublicRoute && !loggedIn) {
     return (
       <Flex
         justifyContent="center"

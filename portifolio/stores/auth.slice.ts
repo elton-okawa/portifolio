@@ -4,12 +4,14 @@ import { AppState } from './store';
 import { LoginResponse } from '@elton-okawa/types';
 
 export interface AuthState {
+  accessToken: string;
   logging: boolean;
   loggedIn: boolean;
   error: string;
 }
 
 const initialState: AuthState = {
+  accessToken: '',
   logging: false,
   loggedIn: false,
   error: '',
@@ -24,9 +26,10 @@ export const authSlice = createSlice({
     },
 
     loginSuccessfully(state, action) {
+      state.accessToken = action.payload.accessToken;
       axios.defaults.headers.common[
         'Authorization'
-      ] = `Bearer ${action.payload.accessToken}`;
+      ] = `Bearer ${state.accessToken}`;
       state.logging = false;
       state.loggedIn = true;
     },
@@ -40,7 +43,7 @@ export const authSlice = createSlice({
 
 export const { loginStarted, loginSuccessfully, loginFailed } =
   authSlice.actions;
-export const selectAuthState = (state: AppState) => state.auth.loggedIn;
+export const selectAuthState = (state: AppState) => state.auth;
 export default authSlice.reducer;
 
 export const requestLogin =

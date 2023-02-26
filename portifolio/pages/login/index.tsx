@@ -14,7 +14,7 @@ const fakeAccounts = [
 ];
 
 export default function LoginPage() {
-  const loggedIn = useSelector(selectAuthState);
+  const { loggedIn } = useSelector(selectAuthState);
   const dispatch = useDispatch();
 
   return (

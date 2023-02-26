@@ -5,6 +5,8 @@ import { Flex } from '@elton-okawa/flex';
 import MessageItem from './MessageItem';
 import MessageInput from './MessageInput';
 import styles from './styles.module.css';
+import { selectAuthState } from '../../stores/auth.slice';
+import { useSelector } from 'react-redux';
 
 const webSocketUrl = 'http://localhost:8080/chat';
 
@@ -12,9 +14,14 @@ let socket;
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
+  const { accessToken } = useSelector(selectAuthState);
 
   useEffect(() => {
-    socket = io(webSocketUrl);
+    socket = io(webSocketUrl, {
+      auth: (callback) => {
+        callback({ token: accessToken });
+      },
+    });
 
     socket.on('connect', () => console.log('connected'));
     socket.on('disconnect', () => console.log('disconnected'));
