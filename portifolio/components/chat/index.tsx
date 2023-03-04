@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 import { selectAuthState } from '../../stores/auth.slice';
 import { useSelector } from 'react-redux';
 
-const webSocketUrl = 'http://localhost:8080/chat';
+const webSocketUrl = '/api/chat';
 
 let socket;
 
@@ -18,6 +18,7 @@ export default function Chat() {
 
   useEffect(() => {
     socket = io(webSocketUrl, {
+      path: '/api/socket.io',
       auth: (callback) => {
         callback({ token: accessToken });
       },

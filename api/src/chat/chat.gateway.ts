@@ -5,6 +5,8 @@ import {
   WebSocketGateway,
   WebSocketServer,
   ConnectedSocket,
+  BaseWsExceptionFilter,
+  WsException,
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 import { ChatService } from './chat.service';
@@ -14,8 +16,11 @@ import {
   ClientToServerEvents,
   InterEvents,
 } from '@elton-okawa/websocket-chat';
+import { UseFilters } from '@nestjs/common';
+import { AllExceptionsFilter } from 'src/websockets/websocket.filter';
 
-@WebSocketGateway({ namespace: 'chat', cors: true })
+@UseFilters(new AllExceptionsFilter())
+@WebSocketGateway({ namespace: 'chat' })
 export class ChatGateway implements OnGatewayConnection<Socket> {
   @WebSocketServer()
   private server: Server<
@@ -27,7 +32,7 @@ export class ChatGateway implements OnGatewayConnection<Socket> {
 
   constructor(private readonly chatService: ChatService) {}
 
-  handleConnection(
+  async handleConnection(
     client: Socket<
       ClientToServerEvents,
       ServerToClientEvents,
@@ -36,9 +41,8 @@ export class ChatGateway implements OnGatewayConnection<Socket> {
     >,
     ...args: any[]
   ) {
-    const user = this.chatService.getUserFromSocket(client);
-    client.data.name = user;
-    this.server.emit('clientConnected', user);
+    const name = client.data.user.name;
+    this.server.emit('clientConnected', name);
   }
 
   @SubscribeMessage('message')

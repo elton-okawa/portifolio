@@ -38,4 +38,9 @@ export class AuthService {
       accessToken: this.jwtService.sign(payload),
     };
   }
+
+  async getUserFromToken(token: string): Promise<{ id: string; name: string }> {
+    const payload = await this.jwtService.verifyAsync<JwtPayload>(token);
+    return { id: payload.sub, name: payload.username };
+  }
 }
