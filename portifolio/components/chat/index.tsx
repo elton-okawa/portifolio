@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 import { selectAuthState } from '../../stores/auth.slice';
 import { useSelector } from 'react-redux';
 
-const webSocketUrl = '/api/chat';
+const webSocketUrl = `${process.env.NEXT_PUBLIC_API_URL}/chat`;
 
 let socket;
 
@@ -18,7 +18,6 @@ export default function Chat() {
 
   useEffect(() => {
     socket = io(webSocketUrl, {
-      path: '/api/socket.io',
       auth: (callback) => {
         callback({ token: accessToken });
       },
@@ -26,6 +25,7 @@ export default function Chat() {
 
     socket.on('connect', (data) => console.log(data));
     socket.on('disconnect', () => console.log('disconnected'));
+    socket.on('clientConnected', (name) => console.log(name));
     socket.on('message', (content: string, owner: string, date: string) => {
       setMessages((current) => [
         ...current,

@@ -20,7 +20,7 @@ import { UseFilters } from '@nestjs/common';
 import { AllExceptionsFilter } from 'src/websockets/websocket.filter';
 
 @UseFilters(new AllExceptionsFilter())
-@WebSocketGateway({ namespace: 'chat' })
+@WebSocketGateway({ namespace: 'chat', cors: true })
 export class ChatGateway implements OnGatewayConnection<Socket> {
   @WebSocketServer()
   private server: Server<
