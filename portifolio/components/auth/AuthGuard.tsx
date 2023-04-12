@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactElement, ReactNode, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
 
@@ -38,5 +38,5 @@ export function AuthGuard({ children }: AuthGuardProps) {
     );
   }
 
-  return children;
+  return <>{children}</>;
 }

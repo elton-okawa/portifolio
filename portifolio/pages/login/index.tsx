@@ -6,7 +6,7 @@ import Flex from '@elton-okawa/flex';
 import Button from '@elton-okawa/button';
 import Typography from '@elton-okawa/typography';
 import { selectAuthState, requestLogin } from '../../stores/auth.slice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../../stores/types';
 
 const fakeAccounts = [
   { name: 'Dog', username: 'dog', password: 'dogdog' },
@@ -14,8 +14,8 @@ const fakeAccounts = [
 ];
 
 export default function LoginPage() {
-  const { loggedIn } = useSelector(selectAuthState);
-  const dispatch = useDispatch();
+  const { loggedIn } = useAppSelector(selectAuthState);
+  const dispatch = useAppDispatch();
 
   return (
     <Container extraClasses={[styles.container]}>

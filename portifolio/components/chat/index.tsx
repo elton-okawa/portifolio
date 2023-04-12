@@ -40,6 +40,7 @@ export default function Chat() {
 
   function handleSubmit(message) {
     socket.emit('message', message);
+    return Promise.resolve();
   }
 
   return (

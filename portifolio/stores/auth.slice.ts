@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { AppState } from './store';
+import { RootState } from './store';
 import { LoginResponse } from '@elton-okawa/types';
 
 export interface AuthState {
@@ -43,7 +43,7 @@ export const authSlice = createSlice({
 
 export const { loginStarted, loginSuccessfully, loginFailed } =
   authSlice.actions;
-export const selectAuthState = (state: AppState) => state.auth;
+export const selectAuthState = (state: RootState) => state.auth;
 export default authSlice.reducer;
 
 export const requestLogin =
