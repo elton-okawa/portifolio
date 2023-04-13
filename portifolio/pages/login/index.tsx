@@ -13,6 +13,16 @@ const fakeAccounts = [
   { name: 'Cat', username: 'cat', password: 'catcat' },
 ];
 
+export function getStaticProps() {
+  if (process.env.NODE_ENV === 'production') {
+    return {
+      notFound: true,
+    };
+  }
+
+  return { props: {} };
+}
+
 export default function LoginPage() {
   const { loggedIn } = useAppSelector(selectAuthState);
   const dispatch = useAppDispatch();
