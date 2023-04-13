@@ -14,13 +14,9 @@ const fakeAccounts = [
 ];
 
 export function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    return {
-      notFound: true,
-    };
-  }
-
-  return { props: {} };
+  return {
+    notFound: true,
+  };
 }
 
 export default function LoginPage() {

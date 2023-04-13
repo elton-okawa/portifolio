@@ -4,13 +4,9 @@ import Chat from '../../components/chat';
 import styles from './ChatPage.module.css';
 
 export function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    return {
-      notFound: true,
-    };
-  }
-
-  return { props: {} };
+  return {
+    notFound: true,
+  };
 }
 
 export default function ChatPage() {
