@@ -7,7 +7,7 @@ import { CircularProgress } from '@elton-okawa/progress';
 import { Flex } from '@elton-okawa/flex';
 import styles from './styles.module.css';
 
-const publicRoutes = ['/', '/login'];
+const publicRoutes = ['/', '/login', '/about', '/404'];
 
 export interface AuthGuardProps {
   children: ReactNode;
