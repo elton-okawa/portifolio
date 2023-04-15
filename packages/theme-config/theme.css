@@ -10,6 +10,7 @@
   --color-disabled: var(--gray-4);
 
   --default-font: var(--font-sans);
+  --default-transition: 1s;
 }
 
 * {
