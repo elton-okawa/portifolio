@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./styles.module.css";
-import { GitHubIcon, LinkedinIcon } from "@elton-okawa/icons";
+import styles from './styles.module.css';
+import { GitHubIcon, LinkedinIcon } from '@elton-okawa/icons';
 
 export function ContactLinks() {
   return (

@@ -1,0 +1,55 @@
+.small {
+  --progress-size: 40px;
+  width: var(--progress-size);
+  height: var(--progress-size);
+}
+
+.medium {
+  --progress-size: 60px;
+  width: var(--progress-size);
+  height: var(--progress-size);
+}
+
+.large {
+  --progress-size: 100px;
+  width: var(--progress-size);
+  height: var(--progress-size);
+}
+
+.container {
+  transform: rotate(-135deg);
+}
+
+.indicator,
+.track {
+  --stroke: min(10%, 6px);
+  --radius: calc(50% - var(--stroke));
+  cx: 50%;
+  cy: 50%;
+  r: var(--radius);
+  fill: transparent;
+  stroke-width: var(--stroke);
+}
+
+.track {
+  stroke: var(--gray-3);
+}
+
+.indicator {
+  --stroke-arc: calc(2 * 3.14 * var(--radius));
+  --stroke-length: calc(var(--stroke-arc) / 4);
+
+  stroke: var(--blue-3);
+  stroke-dasharray: var(--stroke-length)
+    calc(var(--stroke-arc) - var(--stroke-length));
+  animation: circular 2s cubic-bezier(0.5, 0.2, 0.5, 0.8) 0s infinite;
+}
+
+@keyframes circular {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+  100% {
+    stroke-dashoffset: var(--stroke-arc);
+  }
+}

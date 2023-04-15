@@ -13,6 +13,7 @@ import {
   mdiGithub,
   mdiBriefcase,
   mdiInformation,
+  mdiSend,
 } from '@mdi/js';
 
 export interface IconProps {
@@ -60,4 +61,7 @@ export const BriefcaseIcon = (props: IconProps) => (
 );
 export const InformationIcon = (props: IconProps) => (
   <Icon icon={mdiInformation} {...props} />
+);
+export const SendIcon = (props: IconProps) => (
+  <Icon icon={mdiSend} {...props} />
 );

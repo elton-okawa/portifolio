@@ -1,12 +1,12 @@
-import Container from "@elton-okawa/container";
-import React from "react";
-import { getDocsHtmlMarkdown } from "../../lib/docs";
-import styles from "./styles.module.css";
+import Container from '@elton-okawa/container';
+import React from 'react';
+import { getDocsHtmlMarkdown } from '../../lib/docs';
+import styles from './styles.module.css';
 
 export async function getStaticProps() {
   return {
     props: {
-      htmlContent: await getDocsHtmlMarkdown("about"),
+      htmlContent: await getDocsHtmlMarkdown('about'),
     },
   };
 }
