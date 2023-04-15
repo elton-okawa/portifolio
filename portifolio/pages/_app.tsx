@@ -69,9 +69,9 @@ function App({ Component, pageProps }: AppProps) {
         middle={renderNavigation(middleNavigation, pathname)}
         bottom={renderNavigation(bottomNavigation, pathname)}
       />
-      <AuthGuard>
-        <Component {...pageProps} />;
-      </AuthGuard>
+      {/* TODO auth disabled for now */}
+      {/* <AuthGuard> */}
+      <Component {...pageProps} />;{/* </AuthGuard> */}
     </>
   );
 }
