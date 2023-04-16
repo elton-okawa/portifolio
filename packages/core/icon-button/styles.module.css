@@ -10,6 +10,13 @@
   border: none;
 }
 
+.outlined {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: var(--radius-5);
+  border-color: var(--color-primary);
+}
+
 .filled {
   border-style: solid;
   border-width: 0px;

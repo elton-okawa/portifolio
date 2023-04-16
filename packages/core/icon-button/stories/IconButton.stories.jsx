@@ -8,7 +8,7 @@ export default {
   component: IconButton,
 };
 
-const variants = ['text', 'filled'];
+const variants = ['text', 'outlined', 'filled'];
 
 const Template = ({ ...args }) => {
   const buttons = [];
