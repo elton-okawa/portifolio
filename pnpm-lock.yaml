@@ -261,6 +261,7 @@ importers:
 
   packages/core/navigation-drawer:
     specifiers:
+      '@elton-okawa/button': workspace:^0.0.0
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/icon-button': workspace:^0.0.0
@@ -272,6 +273,7 @@ importers:
       open-props: ^1.5.3
       react: ^18.2.0
     dependencies:
+      '@elton-okawa/button': link:../button
       '@elton-okawa/commons': link:../commons
     devDependencies:
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react

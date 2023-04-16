@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
@@ -10,12 +10,16 @@ export interface ButtonProps {
   variant?: ButtonVariant;
   type?: ButtonType;
   extraClasses?: string[];
-  children: string;
-  onClick: () => void;
+  children: ReactNode;
+  onClick?: () => void;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const defaultClick = () => {};
 
 export function Button({
   variant = 'text',
+  onClick = defaultClick,
   extraClasses = [],
   ...props
 }: ButtonProps) {
@@ -27,7 +31,7 @@ export function Button({
         styles[variant],
         ...extraClasses
       )}
-      onClick={() => props.onClick()}
+      onClick={onClick}
       type={props.type}
     >
       {props.children}

@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Typography } from '@elton-okawa/typography';
 import { mergeClassNames } from '@elton-okawa/commons';
+import { Button } from '@elton-okawa/button';
 import styles from './styles.module.css';
 import { useDrawerState } from './DrawerContext';
 import { NavHide } from './NavHide';
@@ -15,17 +16,18 @@ export function NavItem(props: NavItemProps) {
   const open = useDrawerState();
 
   return (
-    <div
-      className={mergeClassNames(
+    <Button
+      variant="filled"
+      extraClasses={[
         styles.navItem,
         props.selected ? styles.selected : '',
-        !open ? styles.collapsed : ''
-      )}
+        !open ? styles.collapsed : '',
+      ]}
     >
       {props.icon}
       <NavHide>
         <Typography>{props.label}</Typography>
       </NavHide>
-    </div>
+    </Button>
   );
 }
