@@ -14,7 +14,7 @@ export interface ButtonProps {
 export function Button({ variant = 'text', ...props }: ButtonProps) {
   return (
     <button
-      className={mergeClassNames(styles.button, styles[variant])}
+      className={mergeClassNames(styles.button, styles.ripple, styles[variant])}
       onClick={() => props.onClick()}
     >
       {props.children}
