@@ -17,12 +17,8 @@ export function NavItem(props: NavItemProps) {
 
   return (
     <Button
-      variant="filled"
-      extraClasses={[
-        styles.navItem,
-        props.selected ? styles.selected : '',
-        !open ? styles.collapsed : '',
-      ]}
+      variant={props.selected ? 'filled' : 'text'}
+      extraClasses={[styles.navItem, !open ? styles.collapsed : '']}
     >
       {props.icon}
       <NavHide>
