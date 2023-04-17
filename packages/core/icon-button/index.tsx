@@ -10,7 +10,7 @@ export function IconButton({
 }: ButtonProps) {
   return (
     <Button
-      extraClasses={[styles.button, styles[variant]]}
+      extraClasses={[styles.iconButton, styles[variant]]}
       onClick={props.onClick}
       type={type}
     >

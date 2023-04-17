@@ -4,6 +4,7 @@
   font-size: var(--font-size-1);
   height: 40px;
   padding: 0 24px;
+  border-width: 0px;
 
   --hover-color: var(--gray-4);
   --active-color: var(--gray-5);
@@ -27,23 +28,15 @@
 }
 
 .text:hover {
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--radius-5);
 }
 
 .outlined {
   background: none;
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--radius-5);
-  border-color: var(--color-primary);
 }
 
 .filled {
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--radius-5);
-  border-color: var(--color-primary);
   background-color: var(--color-primary);
 }
