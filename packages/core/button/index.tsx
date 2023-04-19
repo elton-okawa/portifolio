@@ -1,21 +1,38 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
 export type ButtonVariant = 'text' | 'outlined' | 'filled';
+export type ButtonType = 'submit';
 
 export interface ButtonProps {
   variant?: ButtonVariant;
-  children: string;
-  onClick: () => void;
+  type?: ButtonType;
+  extraClasses?: string[];
+  children: ReactNode;
+  onClick?: () => void;
 }
 
-export function Button({ variant = 'text', ...props }: ButtonProps) {
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const defaultClick = () => {};
+
+export function Button({
+  variant = 'text',
+  onClick = defaultClick,
+  extraClasses = [],
+  ...props
+}: ButtonProps) {
   return (
     <button
-      className={mergeClassNames(styles.button, styles[variant])}
-      onClick={() => props.onClick()}
+      className={mergeClassNames(
+        styles.button,
+        styles.ripple,
+        styles[variant],
+        ...extraClasses
+      )}
+      onClick={onClick}
+      type={props.type}
     >
       {props.children}
     </button>

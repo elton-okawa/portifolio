@@ -4,6 +4,22 @@
   font-size: var(--font-size-1);
   height: 40px;
   padding: 0 24px;
+  border-width: 0px;
+
+  --hover-color: var(--gray-4);
+  --active-color: var(--gray-5);
+}
+
+.button:hover {
+  border-color: var(--hover-color);
+  background-color: var(--hover-color);
+  transition: background-color var(--default-transition);
+}
+
+.button:active {
+  border-color: var(--active-color);
+  background-color: var(--active-color);
+  transition: 0;
 }
 
 .text {
@@ -11,18 +27,16 @@
   border: none;
 }
 
+.text:hover {
+  border-radius: var(--radius-5);
+}
+
 .outlined {
   background: none;
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--radius-5);
-  border-color: var(--color-primary);
 }
 
 .filled {
-  border-style: solid;
-  border-width: 1px;
   border-radius: var(--radius-5);
-  border-color: var(--color-primary);
   background-color: var(--color-primary);
 }
