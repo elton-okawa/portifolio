@@ -11,9 +11,9 @@ export default {
 const Template = ({ ...args }) => {
   return (
     <FullPageScroll extraClasses={[styles.color]}>
-      <Section>Hello</Section>
-      <Section>World</Section>
-      <Section>Test</Section>
+      <p>Hello</p>
+      <p>World</p>
+      <p>Test</p>
     </FullPageScroll>
   );
 };
