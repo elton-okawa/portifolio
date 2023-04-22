@@ -47,6 +47,13 @@ export function FullPageScroll({
     };
   });
 
+  /**
+   * maybe datagrid style
+   * sections: [
+   *   { title: '', content: <component> }
+   * ]
+   */
+
   return (
     <div className={mergeClassNames(styles.container, ...extraClasses)}>
       <div className={styles.indicator}>
@@ -55,7 +62,7 @@ export function FullPageScroll({
             key={index}
             onClick={() => sectionRefs.current[index].current?.scrollIntoView()}
             className={active === index.toString() ? styles.active : ''}
-            href={`#${index}`}
+            data-title="test"
           />
         ))}
       </div>

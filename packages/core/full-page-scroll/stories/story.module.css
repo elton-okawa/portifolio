@@ -1,7 +1,7 @@
-.color > :nth-child(odd) {
+.color section:nth-child(odd) {
   background-color: var(--color-primary);
 }
 
-.color > :nth-child(even) {
+.color section:nth-child(even) {
   background-color: var(--color-secondary);
 }
