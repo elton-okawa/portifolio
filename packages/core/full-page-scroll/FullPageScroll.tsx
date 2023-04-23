@@ -1,79 +1,41 @@
-import React, {
-  ReactNode,
-  useRef,
-  createRef,
-  useEffect,
-  useState,
-} from 'react';
+import React, { ReactNode, useState } from 'react';
 import styles from './styles.module.css';
 import { mergeClassNames } from '@elton-okawa/commons';
 import { Section } from './Section';
 
+interface SectionData {
+  id: string;
+  title: string;
+  content: ReactNode;
+}
+
 interface FullPageScrollProps {
-  children: ReactNode[];
+  sections: SectionData[];
   extraClasses?: string[];
 }
 
 export function FullPageScroll({
-  children,
+  sections,
   extraClasses = [],
 }: FullPageScrollProps) {
-  const sectionRefs = useRef(children.map(() => createRef<HTMLElement>()));
-  const [active, setActive] = useState('0');
-
-  const callback: IntersectionObserverCallback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActive(entry.target.id);
-      }
-    });
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(callback, { threshold: 0.8 });
-
-    sectionRefs.current.map((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-    });
-
-    return () => {
-      sectionRefs.current.map((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
-  });
-
-  /**
-   * maybe datagrid style
-   * sections: [
-   *   { title: '', content: <component> }
-   * ]
-   */
+  const [active, setActive] = useState(sections[0].id);
 
   return (
     <div className={mergeClassNames(styles.container, ...extraClasses)}>
       <div className={styles.indicator}>
-        {Array.from({ length: children.length }, (_, index) => (
+        {sections.map(({ id, title }) => (
           <a
-            key={index}
-            onClick={() => sectionRefs.current[index].current?.scrollIntoView()}
-            className={active === index.toString() ? styles.active : ''}
-            data-title="test"
+            key={id}
+            className={active === id ? styles.active : ''}
+            href={`#${id}`}
+            data-title={title}
           />
         ))}
       </div>
-      {children.map((child, index) => {
+      {sections.map(({ id, content }) => {
         return (
-          <Section
-            key={index}
-            id={index.toString()}
-            ref={sectionRefs.current[index]}
-          >
-            {child}
+          <Section key={id} id={id} onVisible={() => setActive(id)}>
+            {content}
           </Section>
         );
       })}

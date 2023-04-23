@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FullPageScroll, Section } from '../index';
+import { FullPageScroll } from '../index';
 import styles from './story.module.css';
 
 export default {
@@ -10,11 +10,26 @@ export default {
 
 const Template = ({ ...args }) => {
   return (
-    <FullPageScroll extraClasses={[styles.color]}>
-      <p>Hello</p>
-      <p>World</p>
-      <p>Test</p>
-    </FullPageScroll>
+    <FullPageScroll
+      extraClasses={[styles.color]}
+      sections={[
+        {
+          id: 'hello',
+          title: 'Hello',
+          content: <p>Hello</p>,
+        },
+        {
+          id: 'world',
+          title: 'World',
+          content: <p>World</p>,
+        },
+        {
+          id: 'again',
+          title: 'Again',
+          content: <p>Again</p>,
+        },
+      ]}
+    />
   );
 };
 
