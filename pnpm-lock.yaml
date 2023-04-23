@@ -350,6 +350,7 @@ importers:
       '@typescript-eslint/parser': ^5.47.0
       eslint: ^8.30.0
       eslint-config-prettier: ^8.5.0
+      eslint-plugin-react-hooks: ^4.6.0
       typescript: '*'
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.47.0_ncmi6noazr3nzas7jxykisekym
@@ -357,6 +358,7 @@ importers:
       eslint: 8.30.0
       eslint-config-prettier: 8.5.0_eslint@8.30.0
     devDependencies:
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.30.0
       typescript: 4.9.4
 
   packages/prettier-config:

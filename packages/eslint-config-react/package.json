@@ -10,6 +10,7 @@
     "eslint-config-prettier": "^8.5.0"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "*"
   },
   "peerDependencies": {
