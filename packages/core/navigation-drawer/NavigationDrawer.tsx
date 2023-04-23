@@ -9,11 +9,12 @@ export interface NavigationDrawerProps {
   top?: ReactNode;
   middle?: ReactNode;
   bottom?: ReactNode;
+  defaultOpen?: boolean;
 }
 
 export function NavigationDrawer(props: NavigationDrawerProps) {
   return (
-    <DrawerProvider>
+    <DrawerProvider defaultOpen={props.defaultOpen ?? false}>
       <DrawerContainer>
         <DrawerButton />
         <div className={styles.top}>{props.top}</div>
