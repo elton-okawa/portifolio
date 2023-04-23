@@ -71,7 +71,8 @@ function renderExperience() {
               styles.workingExperience,
             ]}
           >
-            + years of working experience
+            <span className={styles.emphasisPrimary}>+ years</span> of working
+            experience
           </Typography>
         </span>
         <br />
@@ -82,7 +83,7 @@ function renderExperience() {
         </Typography>
         <Typography extraClasses={[styles.summary]}>
           My values:{' '}
-          <span className={styles.emphasis}>
+          <span className={styles.emphasisSecondary}>
             lifelong learning, empathy, continuous feedback and work-life
             balance.
           </span>

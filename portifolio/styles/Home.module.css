@@ -49,7 +49,11 @@
   animation-delay: 1s;
 }
 
-.emphasis {
+.emphasisPrimary {
+  color: var(--color-primary);
+}
+
+.emphasisSecondary {
   color: var(--color-secondary);
 }
 
