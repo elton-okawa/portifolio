@@ -55,9 +55,20 @@ function renderExperience() {
             Elton Yoshio Okawa
           </Typography>
         </span>
-        <Typography variant="h3">Full Stack Software Developer with</Typography>
-        <Typography variant="h3">3+ years of working experience</Typography>
-        <Typography>
+        <Typography variant="h3" extraClasses={[styles.slideInUp]}>
+          Full Stack Software Developer with
+        </Typography>
+        <Typography
+          variant="h3"
+          extraClasses={[
+            styles.delayFirst,
+            styles.slideInUp,
+            styles.workingExperience,
+          ]}
+        >
+          + years of working experience
+        </Typography>
+        <Typography extraClasses={[styles.summary]}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
           velit mi. Sed non massa urna. Pellentesque habitant morbi tristique
           senectus et netus et malesuada fames ac turpis egestas. Nullam mi

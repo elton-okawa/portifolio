@@ -5,7 +5,7 @@
 .typewriter {
   overflow: hidden;
   border-right: 0.2em solid var(--color-secondary);
-  animation: typing 2s steps(15, end), blink-caret 1s step-end infinite;
+  animation: typing 1.5s steps(15, end), blink-caret 1s step-end infinite;
   white-space: nowrap;
 }
 
@@ -25,6 +25,44 @@
   }
   50% {
     border-color: var(--color-secondary);
+  }
+}
+
+.slideInUp {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards, var(--animation-slide-in-up);
+  animation-duration: 0.8s;
+}
+
+.delayFirst {
+  animation-delay: 0.8s;
+}
+
+.workingExperience::before {
+  content: counter(count);
+  animation: counter 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.summary {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  33% {
+    counter-increment: count 1;
+  }
+  66% {
+    counter-increment: count 2;
+  }
+  100% {
+    counter-increment: count 3;
   }
 }
 
