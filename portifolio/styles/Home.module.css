@@ -2,6 +2,10 @@
   height: 100%;
 }
 
+.name {
+  color: var(--color-primary);
+}
+
 .typewriter {
   overflow: hidden;
   border-right: 0.2em solid var(--color-secondary);
@@ -39,9 +43,14 @@
 }
 
 .workingExperience::before {
+  color: var(--color-primary);
   content: counter(count);
   animation: counter 1s linear forwards;
   animation-delay: 1s;
+}
+
+.emphasis {
+  color: var(--color-secondary);
 }
 
 .summary {
