@@ -3,8 +3,24 @@ import React from 'react';
 import { FullPageScroll } from '@elton-okawa/full-page-scroll';
 
 import { Introduction } from './Introduction';
+import { Experience, ExperienceData } from './Experience';
+import { listStaticData } from 'lib/static';
 
-export default function Home() {
+interface HomeProps {
+  experience: ExperienceData[];
+}
+
+export async function getStaticProps() {
+  const data = listStaticData('experience') as ExperienceData[];
+
+  return {
+    props: {
+      experience: data,
+    },
+  };
+}
+
+export default function Home({ experience }: HomeProps) {
   return (
     <>
       <main>
@@ -18,7 +34,7 @@ export default function Home() {
             {
               id: 'experience',
               title: 'Experience',
-              content: <p>Experience</p>,
+              content: <Experience experience={experience} />,
             },
             {
               id: 'contact',

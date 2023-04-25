@@ -1,0 +1,8 @@
+.container {
+  color: var(--color-text);
+}
+
+.container:hover {
+  color: var(--color-primary);
+  cursor: default;
+}
