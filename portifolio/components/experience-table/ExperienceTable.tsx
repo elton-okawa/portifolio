@@ -6,6 +6,10 @@ import { Detail } from './Detail';
 export interface ExperienceData {
   id: string;
   name: string;
+  role: string;
+  companyWebsite: string;
+  startDate: Date;
+  endDate: Date | null;
   description: string;
 }
 
@@ -25,7 +29,14 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
           </Button>
         ))}
       </Flex>
-      <Detail name={selected.name} description={selected.description} />
+      <Detail
+        name={selected.name}
+        role={selected.role}
+        companyWebsite={selected.companyWebsite}
+        startDate={selected.startDate}
+        endDate={selected.endDate}
+        description={selected.description}
+      />
     </Flex>
   );
 }

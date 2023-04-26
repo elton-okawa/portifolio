@@ -1,5 +1,9 @@
 {
   "id": "visagio-tecnologia",
   "name": "Visagio Tecnologia",
+  "role": "Software Developer Intern",
+  "companyWebsite": "www.google.com",
+  "startDate": "2020-01-01",
+  "endDate": null,
   "description": "Visagio Description"
 }

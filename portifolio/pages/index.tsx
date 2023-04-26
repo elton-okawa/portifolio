@@ -7,20 +7,36 @@ import { Experience, ExperienceData } from './Experience';
 import { listStaticData } from 'lib/static';
 
 interface HomeProps {
-  experience: ExperienceData[];
+  experienceData: RawExperienceData[];
+}
+
+interface RawExperienceData {
+  id: string;
+  name: string;
+  role: string;
+  companyWebsite: string;
+  startDate: string;
+  endDate: string | null;
+  description: string;
 }
 
 export async function getStaticProps() {
-  const data = listStaticData('experience') as ExperienceData[];
+  const dataList = listStaticData('experience') as RawExperienceData[];
 
   return {
     props: {
-      experience: data,
+      experienceData: dataList,
     },
   };
 }
 
-export default function Home({ experience }: HomeProps) {
+export default function Home({ experienceData }: HomeProps) {
+  const experience = experienceData.map((data) => ({
+    ...data,
+    startDate: new Date(data.startDate),
+    endDate: data.endDate ? new Date(data.endDate) : null,
+  }));
+
   return (
     <>
       <main>

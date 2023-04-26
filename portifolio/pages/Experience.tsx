@@ -8,7 +8,7 @@ import styles from 'styles/Home.module.css';
 import Flex from '@elton-okawa/flex';
 import { ExperienceTable, ExperienceData } from 'components/experience-table';
 
-export { ExperienceData };
+export type { ExperienceData };
 
 const stackItems: TechStackItemProps[] = [
   {
