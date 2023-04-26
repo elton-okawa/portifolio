@@ -3,6 +3,7 @@ import React from 'react';
 import { FullPageScroll } from '@elton-okawa/full-page-scroll';
 
 import { Introduction } from './Introduction';
+import { Contacts } from './Contacts';
 import { Experience, ExperienceData } from './Experience';
 import { listStaticData } from 'lib/static';
 
@@ -47,15 +48,15 @@ export default function Home({ experienceData }: HomeProps) {
               title: 'Introduction',
               content: <Introduction />,
             },
-            {
-              id: 'experience',
-              title: 'Experience',
-              content: <Experience experience={experience} />,
-            },
+            // {
+            //   id: 'experience',
+            //   title: 'Experience',
+            //   content: <Experience experience={experience} />,
+            // },
             {
               id: 'contact',
               title: 'Contacts',
-              content: <p>Contacts</p>,
+              content: <Contacts />,
             },
           ]}
         />

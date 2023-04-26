@@ -9,11 +9,15 @@ export function ContactLinks() {
       <a
         href="https://www.linkedin.com/in/elton-okawa/"
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
       >
         <LinkedinIcon size="large" />
       </a>
-      <a href="https://github.com/elton-okawa" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/elton-okawa"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <GitHubIcon size="large" />
       </a>
     </div>
