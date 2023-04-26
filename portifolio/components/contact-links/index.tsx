@@ -5,20 +5,20 @@ import { GitHubIcon, LinkedinIcon } from '@elton-okawa/icons';
 
 export function ContactLinks() {
   return (
-    <div className={styles.contact}>
+    <div className={styles.container}>
       <a
         href="https://www.linkedin.com/in/elton-okawa/"
         target="_blank"
         rel="noreferrer noopener"
       >
-        <LinkedinIcon size="large" />
+        <LinkedinIcon size="extraLarge" extraClasses={[styles.contact]} />
       </a>
       <a
         href="https://github.com/elton-okawa"
         target="_blank"
         rel="noreferrer noopener"
       >
-        <GitHubIcon size="large" />
+        <GitHubIcon size="extraLarge" extraClasses={[styles.contact]} />
       </a>
     </div>
   );

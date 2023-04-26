@@ -1,3 +1,10 @@
+.extraLarge {
+  min-width: var(--font-size-6);
+  max-width: var(--font-size-6);
+  min-height: var(--font-size-6);
+  max-height: var(--font-size-6);
+}
+
 .large {
   min-width: var(--font-size-5);
   max-width: var(--font-size-5);

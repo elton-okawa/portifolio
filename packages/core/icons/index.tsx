@@ -1,5 +1,5 @@
 import React from 'react';
-import { mergeClassNames } from '@elton-okawa/commons';
+import { ExtraProps, mergeClassNames } from '@elton-okawa/commons';
 
 import styles from './styles.module.css';
 
@@ -16,8 +16,8 @@ import {
   mdiSend,
 } from '@mdi/js';
 
-export interface IconProps {
-  size?: 'small' | 'medium' | 'large';
+export interface IconProps extends ExtraProps {
+  size?: 'small' | 'medium' | 'large' | 'extraLarge';
   color?: 'primary' | 'secondary' | 'text' | 'disabled';
 }
 
@@ -29,11 +29,12 @@ export function Icon({
   icon,
   size = 'medium',
   color = 'text',
+  extraClasses = [],
 }: GenericIconProps & IconProps) {
   return (
     <ThirdPartyIcon
       path={icon}
-      className={mergeClassNames(styles[size], styles[color])}
+      className={mergeClassNames(styles[size], styles[color], ...extraClasses)}
     />
   );
 }
