@@ -13,6 +13,7 @@ export function Contacts() {
         alignItems="center"
         justifyContent="center"
         gap={2}
+        extraClasses={[styles.container]}
       >
         <Typography variant="h3" extraClasses={[styles.emphasisPrimary]}>
           Get In Touch
