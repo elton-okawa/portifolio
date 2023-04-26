@@ -26,6 +26,7 @@ export function Contacts() {
           target="_blank"
           href="https://github.com/elton-okawa/portifolio"
           rel="noreferrer noopener"
+          className={styles.sourceCode}
         >
           <Typography>Check it out!</Typography>
         </a>

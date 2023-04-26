@@ -99,3 +99,11 @@
   align-self: center;
   gap: 10px;
 }
+
+.sourceCode {
+  color: var(--color-primary);
+}
+
+.sourceCode:hover {
+  color: var(--color-secondary);
+}
