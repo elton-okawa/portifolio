@@ -2,11 +2,14 @@ import React from 'react';
 
 import { FullPageScroll } from '@elton-okawa/full-page-scroll';
 
-import { Introduction } from './Introduction';
-import { Contacts } from './Contacts';
-import { Experience, ExperienceData } from './Experience';
+import {
+  Contacts,
+  UnderConstruction,
+  Experience,
+  ExperienceData,
+  Introduction,
+} from 'components/introduction-sections';
 import { listStaticData } from 'lib/static';
-import { UnderConstruction } from './UnderConstruction';
 
 interface HomeProps {
   experienceData: RawExperienceData[];
