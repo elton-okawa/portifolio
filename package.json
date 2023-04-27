@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --stream --filter portifolio --filter api start:dev",
+    "start:dev": "pnpm --stream --filter portifolio --filter api start:dev",
     "lint": "pnpm --filter '...[HEAD^]' lint",
     "format": "pnpm --filter '...[HEAD^]' format",
     "storybook": "storybook dev -p 6006",

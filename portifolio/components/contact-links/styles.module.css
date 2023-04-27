@@ -1,6 +1,10 @@
-.contact {
+.container {
   margin-top: 10px;
   display: flex;
   align-self: center;
   gap: 10px;
+}
+
+.contact:hover {
+  color: var(--color-secondary);
 }

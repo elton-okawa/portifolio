@@ -1,73 +1,71 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../styles/Home.module.css';
-import Typography from '@elton-okawa/typography';
-import { Avatar } from '@elton-okawa/avatar';
-import { Card } from '@elton-okawa/card';
-import { Emoji } from '@elton-okawa/emoji';
-import { Flex } from '@elton-okawa/flex';
-import profilePicture from '../public/profile.jpg';
-import { ContactLinks } from '../components/contact-links';
 
-export default function Home() {
+import { FullPageScroll } from '@elton-okawa/full-page-scroll';
+
+import {
+  Contacts,
+  UnderConstruction,
+  Experience,
+  ExperienceData,
+  Introduction,
+} from 'components/introduction-sections';
+import { listStaticData } from 'lib/static';
+
+interface HomeProps {
+  experienceData: RawExperienceData[];
+}
+
+interface RawExperienceData {
+  id: string;
+  name: string;
+  role: string;
+  companyWebsite: string;
+  startDate: string;
+  endDate: string | null;
+  description: string;
+}
+
+export async function getStaticProps() {
+  const dataList = listStaticData('experience') as RawExperienceData[];
+
+  return {
+    props: {
+      experienceData: dataList,
+    },
+  };
+}
+
+export default function Home({ experienceData }: HomeProps) {
+  const experience = experienceData.map((data) => ({
+    ...data,
+    startDate: new Date(data.startDate),
+    endDate: data.endDate ? new Date(data.endDate) : null,
+  }));
+
   return (
     <>
-      <main className={styles.main}>
-        {renderPresentation()}
-        {renderOtherPages()}
+      <main>
+        <FullPageScroll
+          sections={[
+            {
+              id: 'introduction',
+              title: 'Introduction',
+              content: <Introduction />,
+            },
+            {
+              id: 'experience',
+              title: 'Experience',
+              content: <UnderConstruction title="Experience" />,
+              // content: <Experience experience={experience} />,
+            },
+            {
+              id: 'contact',
+              title: 'Contacts',
+              content: <Contacts />,
+            },
+          ]}
+        />
       </main>
     </>
-  );
-}
-
-function renderPresentation() {
-  return (
-    <Card>
-      <Flex direction="column">
-        <div className={styles.avatar}>
-          <Avatar size="container">
-            <Image alt="profile picture" src={profilePicture} />
-          </Avatar>
-        </div>
-        <Typography variant="h5">
-          Hello there! <Emoji label="waving">👋</Emoji>
-        </Typography>
-        <Typography variant="h3">
-          {`I'm Elton Okawa`} <Emoji label="nerd">🤓</Emoji>
-        </Typography>
-        <Typography variant="h6">
-          A Full Stack Developer with working experience
-        </Typography>
-        <Typography variant="h6">
-          in React, NodeJS and Google Cloud Platform
-        </Typography>
-        <ContactLinks />
-      </Flex>
-    </Card>
-  );
-}
-
-function renderOtherPages() {
-  return (
-    <div className={styles.navigation}>
-      {/* TODO eventually create this page */}
-      {/* <Link href="/experience">
-        <Card>
-          <Typography variant="h3">
-            <Emoji label="briefcase">💼</Emoji> Experience
-          </Typography>
-          <Typography>Read more about my professional experience</Typography>
-        </Card>
-      </Link> */}
-      <Link href="/about">
-        <Card>
-          <Typography variant="h3">
-            <Emoji label="info">🧐</Emoji> About
-          </Typography>
-          <Typography>Read more about this portifolio</Typography>
-        </Card>
-      </Link>
-    </div>
   );
 }

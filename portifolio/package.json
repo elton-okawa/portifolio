@@ -18,6 +18,7 @@
     "@elton-okawa/container": "workspace:^0.0.0",
     "@elton-okawa/emoji": "workspace:^0.0.0",
     "@elton-okawa/flex": "workspace:^0.0.0",
+    "@elton-okawa/full-page-scroll": "workspace:^0.0.0",
     "@elton-okawa/icon-button": "workspace:^0.0.0",
     "@elton-okawa/icons": "workspace:^0.0.0",
     "@elton-okawa/input": "workspace:^0.0.0",

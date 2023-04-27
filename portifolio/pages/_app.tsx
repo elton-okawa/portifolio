@@ -59,7 +59,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Portifolio - Elton Okawa</title>
+        <title>Elton Okawa</title>
         <meta name="description" content="Elton Okawa's portifolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

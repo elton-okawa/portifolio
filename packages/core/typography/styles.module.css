@@ -1,6 +1,6 @@
 .h1 {
   font-family: var(--default-font);
-  font-weight: var(--font-weight-3);
+  font-weight: var(--font-weight-4);
   font-size: var(--font-size-8);
   letter-spacing: var(--font-letterspacing-0);
   margin: 0;
@@ -8,9 +8,9 @@
 
 .h2 {
   font-family: var(--default-font);
-  font-weight: var(--font-weight-3);
+  font-weight: var(--font-weight-4);
   font-size: var(--font-size-7);
-  letter-spacing: var(--font-letterspacing-1);
+  letter-spacing: var(--font-letterspacing-0);
   margin: 0;
 }
 
@@ -18,7 +18,7 @@
   font-family: var(--default-font);
   font-weight: var(--font-weight-4);
   font-size: var(--font-size-6);
-  letter-spacing: var(--font-letterspacing-1);
+  letter-spacing: var(--font-letterspacing-0);
   margin: 0;
 }
 
@@ -34,15 +34,15 @@
   font-family: var(--default-font);
   font-weight: var(--font-weight-4);
   font-size: var(--font-size-4);
-  letter-spacing: var(--font-letterspacing-1);
+  letter-spacing: var(--font-letterspacing-0);
   margin: 0;
 }
 
 .h6 {
   font-family: var(--default-font);
-  font-weight: var(--font-weight-5);
+  font-weight: var(--font-weight-4);
   font-size: var(--font-size-3);
-  letter-spacing: var(--font-letterspacing-1);
+  letter-spacing: var(--font-letterspacing-0);
   margin: 0;
 }
 

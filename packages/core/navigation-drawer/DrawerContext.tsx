@@ -13,11 +13,12 @@ const DrawerApiContext = createContext<Dispatch<SetStateAction<boolean>>>(
 );
 
 export interface DrawerProviderProps {
+  defaultOpen: boolean;
   children: ReactElement;
 }
 
-export function DrawerProvider({ children }: DrawerProviderProps) {
-  const [open, setOpen] = useState(true);
+export function DrawerProvider({ defaultOpen, children }: DrawerProviderProps) {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
     <DrawerStateContext.Provider value={open}>

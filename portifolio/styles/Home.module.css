@@ -1,10 +1,86 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+.experience {
+  height: 100%;
+}
+
+.container {
+  margin: auto 0;
+}
+
+.name {
+  color: var(--color-primary);
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.2em solid var(--color-secondary);
+  animation: typing 1.5s steps(15, end), blink-caret 1s step-end infinite;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-secondary);
+  }
+}
+
+.slideInUp {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards, var(--animation-slide-in-up);
+  animation-duration: 0.8s;
+}
+
+.delayFirst {
+  animation-delay: 0.8s;
+}
+
+.workingExperience::before {
+  color: var(--color-primary);
+  content: counter(count);
+  animation: counter 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.emphasisPrimary {
+  color: var(--color-primary);
+}
+
+.emphasisSecondary {
+  color: var(--color-secondary);
+}
+
+.summary {
+  opacity: 0;
+  animation: var(--animation-fade-in) forwards;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  33% {
+    counter-increment: count 1;
+  }
+  66% {
+    counter-increment: count 2;
+  }
+  100% {
+    counter-increment: count 3;
+  }
 }
 
 .avatar {
@@ -22,4 +98,16 @@
   display: flex;
   align-self: center;
   gap: 10px;
+}
+
+.sourceCode {
+  color: var(--color-primary);
+}
+
+.sourceCode:hover {
+  color: var(--color-secondary);
+}
+
+.underConstruction {
+  margin: auto;
 }

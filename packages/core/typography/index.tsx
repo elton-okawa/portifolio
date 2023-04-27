@@ -30,6 +30,7 @@ export interface TypographyProps {
   children?: string | ReactNode;
   variant?: TypographyVariant;
   align?: TypographyAlign;
+  extraClasses?: string[];
 }
 
 const htmlVariantMapping = {
@@ -52,11 +53,18 @@ export function Typography({
   variant = 'body1',
   align = 'left',
   children,
+  extraClasses = [],
 }: TypographyProps) {
   const Component = htmlVariantMapping[variant] as React.ElementType;
 
   return (
-    <Component className={mergeClassNames(styles[variant], styles[align])}>
+    <Component
+      className={mergeClassNames(
+        styles[variant],
+        styles[align],
+        ...extraClasses
+      )}
+    >
       {children}
     </Component>
   );
