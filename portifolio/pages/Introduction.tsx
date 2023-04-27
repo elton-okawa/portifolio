@@ -16,7 +16,7 @@ export function Introduction() {
         extraClasses={[styles.experience]}
         gap={1}
       >
-        <Typography variant="h6">Hi, I'm</Typography>
+        <Typography variant="h6">{"Hi, I'm"}</Typography>
         <span>
           <Typography
             variant="h2"
