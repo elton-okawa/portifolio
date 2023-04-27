@@ -6,6 +6,7 @@ import { Introduction } from './Introduction';
 import { Contacts } from './Contacts';
 import { Experience, ExperienceData } from './Experience';
 import { listStaticData } from 'lib/static';
+import { UnderConstruction } from './UnderConstruction';
 
 interface HomeProps {
   experienceData: RawExperienceData[];
@@ -48,11 +49,12 @@ export default function Home({ experienceData }: HomeProps) {
               title: 'Introduction',
               content: <Introduction />,
             },
-            // {
-            //   id: 'experience',
-            //   title: 'Experience',
-            //   content: <Experience experience={experience} />,
-            // },
+            {
+              id: 'experience',
+              title: 'Experience',
+              content: <UnderConstruction title="Experience" />,
+              // content: <Experience experience={experience} />,
+            },
             {
               id: 'contact',
               title: 'Contacts',

@@ -1,0 +1,15 @@
+.small {
+  font-size: var(--font-size-3);
+}
+
+.medium {
+  font-size: var(--font-size-4);
+}
+
+.large {
+  font-size: var(--font-size-5);
+}
+
+.extraLarge {
+  font-size: var(--font-size-6);
+}
