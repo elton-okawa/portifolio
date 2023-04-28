@@ -55,8 +55,12 @@ export default function Home({ experienceData }: HomeProps) {
             {
               id: 'experience',
               title: 'Experience',
-              content: <UnderConstruction title="Experience" />,
-              // content: <Experience experience={experience} />,
+              content: <Experience experience={experience} />,
+            },
+            {
+              id: 'portifolio',
+              title: 'Portifolio',
+              content: <UnderConstruction title="Portifolio" />,
             },
             {
               id: 'contact',
