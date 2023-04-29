@@ -22,7 +22,7 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
   const [selected, setSelected] = useState(experience[0]);
 
   return (
-    <Flex>
+    <Flex gap={2}>
       <Flex direction="column">
         {experience.map((data) => (
           <Item
