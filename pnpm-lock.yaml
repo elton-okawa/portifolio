@@ -399,6 +399,7 @@ importers:
       '@elton-okawa/icon-button': workspace:^0.0.0
       '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/input': workspace:^0.0.0
+      '@elton-okawa/link': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@elton-okawa/progress': workspace:^0.0.0
@@ -439,6 +440,7 @@ importers:
       '@elton-okawa/icon-button': link:../packages/core/icon-button
       '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/input': link:../packages/core/input
+      '@elton-okawa/link': link:../packages/core/link
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/progress': link:../packages/core/progress
       '@elton-okawa/theme-config': link:../packages/theme-config

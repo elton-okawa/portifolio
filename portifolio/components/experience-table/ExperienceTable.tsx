@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Flex from '@elton-okawa/flex';
-import Button from '@elton-okawa/button';
+import { Button } from '@elton-okawa/button';
 import { Detail } from './Detail';
+import { Item } from './Item';
 
 export interface ExperienceData {
   id: string;
@@ -24,9 +25,13 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
     <Flex>
       <Flex direction="column">
         {experience.map((data) => (
-          <Button key={data.id} onClick={() => setSelected(data)}>
+          <Item
+            key={data.id}
+            selected={selected.id === data.id}
+            onClick={() => setSelected(data)}
+          >
             {data.name}
-          </Button>
+          </Item>
         ))}
       </Flex>
       <Detail

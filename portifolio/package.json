@@ -22,6 +22,7 @@
     "@elton-okawa/icon-button": "workspace:^0.0.0",
     "@elton-okawa/icons": "workspace:^0.0.0",
     "@elton-okawa/input": "workspace:^0.0.0",
+    "@elton-okawa/link": "workspace:^0.0.0",
     "@elton-okawa/navigation-drawer": "workspace:^0.0.0",
     "@elton-okawa/progress": "workspace:^0.0.0",
     "@elton-okawa/theme-config": "workspace:^1.0.0",
