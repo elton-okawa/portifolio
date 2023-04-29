@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Container from '@elton-okawa/container';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
 
 import { TechStackItem, TechStackItemProps } from 'components/tech-stack-item';
 import styles from 'styles/Home.module.css';
@@ -32,11 +32,13 @@ interface ExperienceProps {
 export function Experience({ experience }: ExperienceProps) {
   return (
     <Container>
-      <Typography variant="h2" extraClasses={[styles.emphasisPrimary]}>
-        Experience
-      </Typography>
-      {renderMainStack()}
-      <ExperienceTable experience={experience} />
+      <Flex direction="column" gap={3}>
+        <Typography variant="h2" color="primary">
+          Experience
+        </Typography>
+        {renderMainStack()}
+        <ExperienceTable experience={experience} />
+      </Flex>
     </Container>
   );
 }

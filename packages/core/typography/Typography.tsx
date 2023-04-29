@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { mergeClassNames } from '@elton-okawa/commons';
 
-import styles from './styles.module.css';
+import styles from './Typography.module.css';
 
 type TypographyVariant =
   | 'h1'
@@ -26,10 +26,13 @@ type TypographyAlign =
   | 'initial'
   | 'inherit';
 
+type TypographyColor = 'text' | 'disabled' | 'primary' | 'secondary';
+
 export interface TypographyProps {
   children?: string | ReactNode;
   variant?: TypographyVariant;
   align?: TypographyAlign;
+  color?: TypographyColor;
   extraClasses?: string[];
 }
 
@@ -52,6 +55,7 @@ const htmlVariantMapping = {
 export function Typography({
   variant = 'body1',
   align = 'left',
+  color = 'text',
   children,
   extraClasses = [],
 }: TypographyProps) {
@@ -62,6 +66,7 @@ export function Typography({
       className={mergeClassNames(
         styles[variant],
         styles[align],
+        styles[color],
         ...extraClasses
       )}
     >
@@ -69,5 +74,3 @@ export function Typography({
     </Component>
   );
 }
-
-export default Typography;

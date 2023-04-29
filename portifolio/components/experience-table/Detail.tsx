@@ -1,5 +1,5 @@
 import React from 'react';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
 import { Flex } from '@elton-okawa/flex';
 import { Link } from '@elton-okawa/link';
 

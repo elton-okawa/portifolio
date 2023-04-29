@@ -120,3 +120,19 @@
 .inherit {
   text-align: inherit;
 }
+
+.text {
+  color: var(--color-text);
+}
+
+.disabled {
+  color: var(--color-disabled);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary-dark);
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Flex } from '@elton-okawa/flex';
 import styles from './TechStackItem.module.css';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
 
 export interface TechStackItemProps {
   title: string;
