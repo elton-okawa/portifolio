@@ -51,7 +51,7 @@ export function Experience({ experience }: ExperienceProps) {
 function renderMainStack() {
   return (
     <Flex gap={3} alignItems="center" extraClasses={[styles.mainStack]}>
-      <Typography>Main Stack</Typography>
+      <Typography color="secondary">Main Stack</Typography>
       {stackItems.map((data) => (
         <TechStackItem key={data.title} {...data} />
       ))}

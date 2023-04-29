@@ -35,7 +35,7 @@ export function Detail({
           <Typography variant="h6">{name}</Typography>
         </Link>
       </Flex>
-      <Typography variant="subtitle2" extraClasses={[styles.period]}>
+      <Typography variant="subtitle2" color="disabled">
         {formatDate(startDate, endDate)}
       </Typography>
       <Typography>{description}</Typography>

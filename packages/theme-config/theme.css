@@ -11,7 +11,7 @@
   --color-warning: var(--yellow-3);
   --color-success: var(--green-5);
   --color-text: var(--gray-8);
-  --color-disabled: var(--gray-4);
+  --color-disabled: var(--gray-6);
 
   --default-font: var(--font-sans);
   --default-transition: 0.5s;
