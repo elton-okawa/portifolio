@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { mergeClassNames } from '@elton-okawa/commons';
 
-import styles from './styles.module.css';
+import styles from './Button.module.css';
 
 export type ButtonVariant = 'text' | 'outlined' | 'filled';
 export type ButtonType = 'submit';
