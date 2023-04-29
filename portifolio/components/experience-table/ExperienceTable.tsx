@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Flex from '@elton-okawa/flex';
 import { Button } from '@elton-okawa/button';
+import styles from './ExperienceTable.module.css';
 import { Detail } from './Detail';
 import { Item } from './Item';
 
@@ -22,7 +23,7 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
   const [selected, setSelected] = useState(experience[0]);
 
   return (
-    <Flex gap={2}>
+    <Flex gap={2} extraClasses={[styles.container]}>
       <Flex direction="column">
         {experience.map((data) => (
           <Item

@@ -4,7 +4,7 @@ import Container from '@elton-okawa/container';
 import { Typography } from '@elton-okawa/typography';
 
 import { TechStackItem, TechStackItemProps } from 'components/tech-stack-item';
-import styles from 'styles/Home.module.css';
+import styles from './IntroductionSections.module.css';
 import Flex from '@elton-okawa/flex';
 import { ExperienceTable, ExperienceData } from 'components/experience-table';
 
@@ -31,8 +31,13 @@ interface ExperienceProps {
 
 export function Experience({ experience }: ExperienceProps) {
   return (
-    <Container>
-      <Flex direction="column" gap={3}>
+    <Container extraClasses={[styles.experienceContainer]}>
+      <Flex
+        direction="column"
+        justifyContent="center"
+        gap={3}
+        extraClasses={[styles.experience]}
+      >
         <Typography variant="h2" color="primary">
           Experience
         </Typography>
