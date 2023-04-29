@@ -392,6 +392,7 @@ importers:
       '@elton-okawa/card': workspace:^0.0.0
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/container': workspace:^0.0.0
+      '@elton-okawa/divider': workspace:^0.0.0
       '@elton-okawa/emoji': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/flex': workspace:^0.0.0
@@ -434,6 +435,7 @@ importers:
       '@elton-okawa/card': link:../packages/core/card
       '@elton-okawa/commons': link:../packages/core/commons
       '@elton-okawa/container': link:../packages/core/container
+      '@elton-okawa/divider': link:../packages/core/divider
       '@elton-okawa/emoji': link:../packages/core/emoji
       '@elton-okawa/flex': link:../packages/core/flex
       '@elton-okawa/full-page-scroll': link:../packages/core/full-page-scroll

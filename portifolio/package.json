@@ -16,6 +16,7 @@
     "@elton-okawa/card": "workspace:^0.0.0",
     "@elton-okawa/commons": "workspace:^0.0.0",
     "@elton-okawa/container": "workspace:^0.0.0",
+    "@elton-okawa/divider": "workspace:^0.0.0",
     "@elton-okawa/emoji": "workspace:^0.0.0",
     "@elton-okawa/flex": "workspace:^0.0.0",
     "@elton-okawa/full-page-scroll": "workspace:^0.0.0",

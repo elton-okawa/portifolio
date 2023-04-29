@@ -20,7 +20,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    var(--color-text),
+    var(--color-disabled),
     transparent
   );
 }

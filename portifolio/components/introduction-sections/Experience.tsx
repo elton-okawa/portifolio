@@ -2,6 +2,7 @@ import React from 'react';
 
 import Container from '@elton-okawa/container';
 import { Typography } from '@elton-okawa/typography';
+import { Divider } from '@elton-okawa/divider';
 
 import { TechStackItem, TechStackItemProps } from 'components/tech-stack-item';
 import styles from './IntroductionSections.module.css';
@@ -41,8 +42,11 @@ export function Experience({ experience }: ExperienceProps) {
         <Typography variant="h2" color="primary" align="center">
           Experience
         </Typography>
+        <Divider size="medium" />
         {renderMainStack()}
+        <Divider size="medium" />
         <ExperienceTable experience={experience} />
+        <Divider />
       </Flex>
     </Container>
   );
