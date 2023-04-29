@@ -26,3 +26,17 @@
   border-right: 3px solid var(--color-primary);
   padding-right: 24px;
 }
+
+.description {
+  margin-left: 20px;
+}
+
+.description li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.description li::marker {
+  content: '> ';
+  color: var(--color-primary);
+  font-weight: var(--font-weight-9);
+}

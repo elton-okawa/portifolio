@@ -5,5 +5,5 @@
   "companyWebsite": "www.google.com",
   "startDate": "2020-01-01",
   "endDate": "2020-02-01",
-  "description": "Tapps Games Description"
+  "description": ["Tapps Games Description"]
 }

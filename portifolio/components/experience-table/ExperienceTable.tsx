@@ -12,7 +12,7 @@ export interface ExperienceData {
   companyWebsite: string;
   startDate: Date;
   endDate: Date | null;
-  description: string;
+  description: string[];
 }
 
 export interface ExperienceTableProps {

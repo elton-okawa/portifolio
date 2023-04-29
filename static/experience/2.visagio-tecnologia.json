@@ -5,5 +5,9 @@
   "companyWebsite": "www.google.com",
   "startDate": "2020-01-01",
   "endDate": null,
-  "description": "Visagio Description"
+  "description": [
+    "Visagio Description",
+    "Descriptionaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssssss saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "Description"
+  ]
 }

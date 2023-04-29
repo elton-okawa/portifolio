@@ -11,7 +11,7 @@ interface DetailProps {
   companyWebsite: string;
   startDate: Date;
   endDate: Date | null;
-  description: string;
+  description: string[];
 }
 
 const dateOptions: Intl.DateTimeFormatOptions = {
@@ -38,7 +38,13 @@ export function Detail({
       <Typography variant="subtitle2" color="disabled">
         {formatDate(startDate, endDate)}
       </Typography>
-      <Typography>{description}</Typography>
+      <ul className={styles.description}>
+        {description.map((line, index) => (
+          <li key={index}>
+            <Typography wrap="breakWord">{line}</Typography>
+          </li>
+        ))}
+      </ul>
     </Flex>
   );
 }
