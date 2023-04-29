@@ -33,11 +33,14 @@ type TypographyColor =
   | 'primary'
   | 'secondary';
 
+type TypographyWrap = 'normal' | 'breakWord' | 'anywhere';
+
 export interface TypographyProps {
   children?: string | ReactNode;
   variant?: TypographyVariant;
   align?: TypographyAlign;
   color?: TypographyColor;
+  wrap?: TypographyWrap;
   extraClasses?: string[];
 }
 
@@ -61,6 +64,7 @@ export function Typography({
   variant = 'body1',
   align = 'left',
   color = 'inherit',
+  wrap = 'normal',
   children,
   extraClasses = [],
 }: TypographyProps) {
@@ -72,6 +76,7 @@ export function Typography({
         styles[variant],
         styles[align],
         styles[color],
+        styles[wrap],
         ...extraClasses
       )}
     >

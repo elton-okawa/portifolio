@@ -140,3 +140,15 @@
 .secondary {
   color: var(--color-secondary-dark);
 }
+
+.normal {
+  word-wrap: normal;
+}
+
+.breakWord {
+  word-wrap: break-word;
+}
+
+.anywhere {
+  word-wrap: anywhere;
+}
