@@ -121,6 +121,10 @@
   text-align: inherit;
 }
 
+.inherit {
+  color: inherit;
+}
+
 .text {
   color: var(--color-text);
 }

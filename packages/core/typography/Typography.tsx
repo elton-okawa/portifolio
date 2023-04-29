@@ -26,7 +26,12 @@ type TypographyAlign =
   | 'initial'
   | 'inherit';
 
-type TypographyColor = 'text' | 'disabled' | 'primary' | 'secondary';
+type TypographyColor =
+  | 'inherit'
+  | 'text'
+  | 'disabled'
+  | 'primary'
+  | 'secondary';
 
 export interface TypographyProps {
   children?: string | ReactNode;
@@ -55,7 +60,7 @@ const htmlVariantMapping = {
 export function Typography({
   variant = 'body1',
   align = 'left',
-  color = 'text',
+  color = 'inherit',
   children,
   extraClasses = [],
 }: TypographyProps) {
