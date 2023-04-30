@@ -1,0 +1,14 @@
+{
+  "id": "fdte",
+  "name": "FDTE",
+  "role": "Back End Developer Intern",
+  "companyWebsite": "https://www.fdte.org.br/",
+  "location": "Brazil (remote)",
+  "startDate": "2020-05-01",
+  "endDate": "2020-08-01",
+  "description": [
+    "Participated in the development of a software for a card receivable company",
+    "All features developed had automated tests"
+  ],
+  "technologies": ["Java", "Docker"]
+}

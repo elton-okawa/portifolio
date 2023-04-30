@@ -1,0 +1,18 @@
+{
+  "id": "space-sheep-games",
+  "name": "Space Sheep Games",
+  "role": "Full Stack Developer",
+  "companyWebsite": "https://www.spacesheepgames.com/en/",
+  "location": "Brazil (remote)",
+  "startDate": "2021-01-01",
+  "endDate": null,
+  "description": [
+    "Developing new NodeJS services with automated tests and documentation",
+    "Maintenance and development of small features in existing NodeJS services",
+    "Troubleshooting using available observability tools (Datadog)",
+    "Using and operating Google Cloud tools (GKE - Kubernetes, Cloud Storage and Pub/Sub)",
+    "Maintenance of CI/CD pipelines (GoCD and CircleCI)",
+    "Developing internal tools' UI using React"
+  ],
+  "technologies": ["Node.js", "React", "GCP", "DevOps", "Kubernetes"]
+}
