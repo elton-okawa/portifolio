@@ -9,6 +9,7 @@ interface DetailProps {
   name: string;
   role: string;
   companyWebsite: string;
+  location: string;
   startDate: Date;
   endDate: Date | null;
   description: string[];
@@ -23,6 +24,7 @@ export function Detail({
   name,
   role,
   companyWebsite,
+  location,
   startDate,
   endDate,
   description,
@@ -35,9 +37,14 @@ export function Detail({
           <Typography variant="h6">{name}</Typography>
         </Link>
       </Flex>
-      <Typography variant="subtitle2" color="disabled">
-        {formatDate(startDate, endDate)}
-      </Typography>
+      <span>
+        <Typography variant="subtitle2" color="disabled">
+          {formatDate(startDate, endDate)}
+        </Typography>
+        <Typography variant="subtitle2" color="disabled">
+          {location}
+        </Typography>
+      </span>
       <ul className={styles.description}>
         {description.map((line, index) => (
           <li key={index}>

@@ -20,9 +20,10 @@ interface RawExperienceData {
   name: string;
   role: string;
   companyWebsite: string;
+  location: string;
   startDate: string;
   endDate: string | null;
-  description: string;
+  description: string[];
 }
 
 export async function getStaticProps() {

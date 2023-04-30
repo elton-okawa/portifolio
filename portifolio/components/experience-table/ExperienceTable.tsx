@@ -11,6 +11,7 @@ export interface ExperienceData {
   name: string;
   role: string;
   companyWebsite: string;
+  location: string;
   startDate: Date;
   endDate: Date | null;
   description: string[];
@@ -48,6 +49,7 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
           name={selected.name}
           role={selected.role}
           companyWebsite={selected.companyWebsite}
+          location={selected.location}
           startDate={selected.startDate}
           endDate={selected.endDate}
           description={selected.description}
