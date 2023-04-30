@@ -24,7 +24,7 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
 
   return (
     <Flex gap={2} extraClasses={[styles.container]}>
-      <Flex direction="column">
+      <Flex direction="column" extraClasses={[styles.itemContainer]}>
         {experience.map((data) => (
           <Item
             key={data.id}
