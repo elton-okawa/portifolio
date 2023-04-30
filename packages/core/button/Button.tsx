@@ -1,15 +1,16 @@
 import React, { ReactNode } from 'react';
-import { mergeClassNames } from '@elton-okawa/commons';
+import { ExtraProps, mergeClassNames } from '@elton-okawa/commons';
 
-import styles from './styles.module.css';
+import styles from './Button.module.css';
 
 export type ButtonVariant = 'text' | 'outlined' | 'filled';
+export type ButtonShape = 'rounded' | 'square';
 export type ButtonType = 'submit';
 
-export interface ButtonProps {
+export interface ButtonProps extends ExtraProps {
   variant?: ButtonVariant;
+  shape?: ButtonShape;
   type?: ButtonType;
-  extraClasses?: string[];
   children: ReactNode;
   onClick?: () => void;
 }
@@ -19,6 +20,7 @@ const defaultClick = () => {};
 
 export function Button({
   variant = 'text',
+  shape = 'rounded',
   onClick = defaultClick,
   extraClasses = [],
   ...props
@@ -27,8 +29,8 @@ export function Button({
     <button
       className={mergeClassNames(
         styles.button,
-        styles.ripple,
         styles[variant],
+        styles[shape],
         ...extraClasses
       )}
       onClick={onClick}

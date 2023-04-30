@@ -120,3 +120,35 @@
 .inherit {
   text-align: inherit;
 }
+
+.inherit {
+  color: inherit;
+}
+
+.text {
+  color: var(--color-text);
+}
+
+.disabled {
+  color: var(--color-disabled);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary-dark);
+}
+
+.normal {
+  word-wrap: normal;
+}
+
+.breakWord {
+  word-wrap: break-word;
+}
+
+.anywhere {
+  word-wrap: anywhere;
+}

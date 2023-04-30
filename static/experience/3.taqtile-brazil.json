@@ -1,0 +1,14 @@
+{
+  "id": "taqtile-brazil",
+  "name": "Taqtile Brazil",
+  "role": "Back End Developer Intern",
+  "companyWebsite": "https://www.taqtile.com.br/",
+  "location": "Brazil (onsite)",
+  "startDate": "2019-09-02",
+  "endDate": "2019-12-02",
+  "description": [
+    "Added features to a backend service of an internal app of a beauty products' company that helps consultants to sell more products",
+    "Increased the overall test coverage"
+  ],
+  "technologies": ["GraphQL", "Node.js", "TypeScript"]
+}

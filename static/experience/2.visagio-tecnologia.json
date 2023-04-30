@@ -1,9 +1,16 @@
 {
   "id": "visagio-tecnologia",
   "name": "Visagio Tecnologia",
-  "role": "Software Developer Intern",
-  "companyWebsite": "www.google.com",
-  "startDate": "2020-01-01",
-  "endDate": null,
-  "description": "Visagio Description"
+  "role": "Software Engineer Intern",
+  "companyWebsite": "https://visagio.com/tecnologia/",
+  "location": "Brazil (onsite)",
+  "startDate": "2019-01-02",
+  "endDate": "2019-04-02",
+  "description": [
+    "Worked onsite at a mobile service provider",
+    "Understood its business requirements in order to automate their process",
+    "Automated their invoice download using Selenium",
+    "Participated in the development of server and UI using Ruby on Rails"
+  ],
+  "technologies": ["Ruby on Rails, Selenium"]
 }

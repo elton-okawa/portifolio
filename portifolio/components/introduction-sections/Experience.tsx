@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Container from '@elton-okawa/container';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
+import { Divider } from '@elton-okawa/divider';
 
 import { TechStackItem, TechStackItemProps } from 'components/tech-stack-item';
-import styles from 'styles/Home.module.css';
+import styles from './IntroductionSections.module.css';
 import Flex from '@elton-okawa/flex';
 import { ExperienceTable, ExperienceData } from 'components/experience-table';
 
@@ -31,20 +32,30 @@ interface ExperienceProps {
 
 export function Experience({ experience }: ExperienceProps) {
   return (
-    <Container>
-      <Typography variant="h2" extraClasses={[styles.emphasisPrimary]}>
-        Experience
-      </Typography>
-      {renderMainStack()}
-      <ExperienceTable experience={experience} />
+    <Container extraClasses={[styles.experienceContainer]}>
+      <Flex
+        direction="column"
+        justifyContent="center"
+        gap={3}
+        extraClasses={[styles.experience]}
+      >
+        <Typography variant="h2" color="primary" align="center">
+          Experience
+        </Typography>
+        <Divider size="medium" />
+        {renderMainStack()}
+        <Divider size="medium" />
+        <ExperienceTable experience={experience} />
+        <Divider />
+      </Flex>
     </Container>
   );
 }
 
 function renderMainStack() {
   return (
-    <Flex gap={3} alignItems="center">
-      <Typography>Main Stack</Typography>
+    <Flex gap={3} alignItems="center" extraClasses={[styles.mainStack]}>
+      <Typography color="secondary">Main Stack</Typography>
       {stackItems.map((data) => (
         <TechStackItem key={data.title} {...data} />
       ))}

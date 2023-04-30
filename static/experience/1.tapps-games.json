@@ -1,9 +1,13 @@
 {
   "id": "tapps-games",
   "name": "Tapps Games",
-  "role": "Software Developer Intern",
-  "companyWebsite": "www.google.com",
-  "startDate": "2020-01-01",
-  "endDate": "2020-02-01",
-  "description": "Tapps Games Description"
+  "role": "Software Engineer Intern",
+  "companyWebsite": "https://tappsgames.com/",
+  "location": "Brazil (onsite)",
+  "startDate": "2018-05-02",
+  "endDate": "2018-08-02",
+  "description": [
+    "Worked with its internal engine integration with Ads Network"
+  ],
+  "technologies": ["Lua", "Android", "iOS"]
 }

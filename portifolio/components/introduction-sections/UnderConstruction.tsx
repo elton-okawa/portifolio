@@ -1,7 +1,7 @@
 import Flex from '@elton-okawa/flex';
 import React from 'react';
 import { Emoji } from '@elton-okawa/emoji';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
 import styles from 'styles/Home.module.css';
 import Container from '@elton-okawa/container';
 

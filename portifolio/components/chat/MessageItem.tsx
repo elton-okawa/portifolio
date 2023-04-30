@@ -5,7 +5,7 @@ import { Avatar } from '@elton-okawa/avatar';
 import { mergeClassNames } from '@elton-okawa/commons';
 import Image from 'next/image';
 import profilePicture from '../../public/profile.jpg';
-import Typography from '@elton-okawa/typography';
+import { Typography } from '@elton-okawa/typography';
 import styles from './styles.module.css';
 
 interface MessageItemProps {

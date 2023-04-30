@@ -1,0 +1,44 @@
+.divider {
+  height: 1px;
+  border: none;
+  margin: 0 auto;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.medium {
+  width: 70%;
+}
+
+.small {
+  width: 50%;
+}
+
+.black {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-disabled),
+    transparent
+  );
+}
+
+.primary {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+}
+
+.secondary {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-secondary),
+    transparent
+  );
+}

@@ -3,8 +3,8 @@ import React from 'react';
 import Container from '@elton-okawa/container';
 import styles from './styles.module.css';
 import Flex from '@elton-okawa/flex';
-import Button from '@elton-okawa/button';
-import Typography from '@elton-okawa/typography';
+import { Button } from '@elton-okawa/button';
+import { Typography } from '@elton-okawa/typography';
 import { selectAuthState, requestLogin } from '../../stores/auth.slice';
 import { useAppSelector, useAppDispatch } from '../../stores/types';
 

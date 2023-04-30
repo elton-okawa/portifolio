@@ -20,9 +20,11 @@ interface RawExperienceData {
   name: string;
   role: string;
   companyWebsite: string;
+  location: string;
   startDate: string;
   endDate: string | null;
-  description: string;
+  description: string[];
+  technologies: string[];
 }
 
 export async function getStaticProps() {
@@ -30,7 +32,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      experienceData: dataList,
+      experienceData: dataList.reverse(),
     },
   };
 }
@@ -55,8 +57,12 @@ export default function Home({ experienceData }: HomeProps) {
             {
               id: 'experience',
               title: 'Experience',
-              content: <UnderConstruction title="Experience" />,
-              // content: <Experience experience={experience} />,
+              content: <Experience experience={experience} />,
+            },
+            {
+              id: 'portifolio',
+              title: 'Portifolio',
+              content: <UnderConstruction title="Portifolio" />,
             },
             {
               id: 'contact',

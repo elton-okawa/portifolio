@@ -185,6 +185,19 @@ importers:
       '@elton-okawa/prettier-config': link:../../prettier-config
       '@types/react': 18.0.26
 
+  packages/core/divider:
+    specifiers:
+      '@elton-okawa/commons': workspace:^0.0.0
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+    dependencies:
+      '@elton-okawa/commons': link:../commons
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+
   packages/core/emoji:
     specifiers:
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
@@ -260,6 +273,19 @@ importers:
       open-props: 1.5.3
 
   packages/core/input:
+    specifiers:
+      '@elton-okawa/commons': workspace:^0.0.0
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+    dependencies:
+      '@elton-okawa/commons': link:../commons
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+
+  packages/core/link:
     specifiers:
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
@@ -392,6 +418,7 @@ importers:
       '@elton-okawa/card': workspace:^0.0.0
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/container': workspace:^0.0.0
+      '@elton-okawa/divider': workspace:^0.0.0
       '@elton-okawa/emoji': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
       '@elton-okawa/flex': workspace:^0.0.0
@@ -399,6 +426,7 @@ importers:
       '@elton-okawa/icon-button': workspace:^0.0.0
       '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/input': workspace:^0.0.0
+      '@elton-okawa/link': workspace:^0.0.0
       '@elton-okawa/navigation-drawer': workspace:^0.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
       '@elton-okawa/progress': workspace:^0.0.0
@@ -433,12 +461,14 @@ importers:
       '@elton-okawa/card': link:../packages/core/card
       '@elton-okawa/commons': link:../packages/core/commons
       '@elton-okawa/container': link:../packages/core/container
+      '@elton-okawa/divider': link:../packages/core/divider
       '@elton-okawa/emoji': link:../packages/core/emoji
       '@elton-okawa/flex': link:../packages/core/flex
       '@elton-okawa/full-page-scroll': link:../packages/core/full-page-scroll
       '@elton-okawa/icon-button': link:../packages/core/icon-button
       '@elton-okawa/icons': link:../packages/core/icons
       '@elton-okawa/input': link:../packages/core/input
+      '@elton-okawa/link': link:../packages/core/link
       '@elton-okawa/navigation-drawer': link:../packages/core/navigation-drawer
       '@elton-okawa/progress': link:../packages/core/progress
       '@elton-okawa/theme-config': link:../packages/theme-config

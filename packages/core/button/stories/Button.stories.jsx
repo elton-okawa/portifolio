@@ -8,12 +8,19 @@ export default {
 };
 
 const variants = ['text', 'outlined', 'filled'];
+const shapes = ['rounded', 'square'];
 
 const Template = ({ ...args }) => {
   const buttons = [];
 
-  for (const variant of variants) {
-    buttons.push(<Button variant={variant}>{args.label}</Button>);
+  for (const shape of shapes) {
+    for (const variant of variants) {
+      buttons.push(
+        <Button key={`${shape}-${variant}`} variant={variant} shape={shape}>
+          {args.label}
+        </Button>
+      );
+    }
     buttons.push(<br />);
   }
 
