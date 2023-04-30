@@ -4,7 +4,8 @@
 }
 
 .itemContainer {
-  width: 120px;
+  min-width: 140px;
+  width: 140px;
 }
 
 .period {
@@ -16,7 +17,6 @@
   font-weight: var(--font-weight-5);
   font-size: var(--font-size-1);
   height: 50px;
-  padding: 0px 24px;
   border: none;
   border-right: 3px solid var(--gray-4);
   background: none;
@@ -29,6 +29,7 @@
 
 .detailContainer {
   height: 100%;
+  margin-left: 10px;
 }
 
 .selected {

@@ -39,9 +39,9 @@ export function Detail({
     >
       <span>
         <Flex gap={1}>
-          <Typography variant="h6">{role} - </Typography>
+          <Typography variant="h5">{role} - </Typography>
           <Link href={companyWebsite}>
-            <Typography variant="h6">{name}</Typography>
+            <Typography variant="h5">{name}</Typography>
           </Link>
         </Flex>
         <span>

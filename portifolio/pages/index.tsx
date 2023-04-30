@@ -32,7 +32,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      experienceData: dataList,
+      experienceData: dataList.reverse(),
     },
   };
 }
