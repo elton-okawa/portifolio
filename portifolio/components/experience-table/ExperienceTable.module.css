@@ -27,11 +27,16 @@
   background-color: var(--gray-2);
 }
 
+.detailContainer {
+  height: 100%;
+}
+
 .selected {
   border-right: 3px solid var(--color-primary);
 }
 
 .description {
+  margin-top: 10px;
   margin-left: 20px;
 }
 

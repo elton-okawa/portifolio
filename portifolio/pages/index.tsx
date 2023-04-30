@@ -24,6 +24,7 @@ interface RawExperienceData {
   startDate: string;
   endDate: string | null;
   description: string[];
+  technologies: string[];
 }
 
 export async function getStaticProps() {

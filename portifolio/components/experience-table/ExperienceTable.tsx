@@ -15,6 +15,7 @@ export interface ExperienceData {
   startDate: Date;
   endDate: Date | null;
   description: string[];
+  technologies: string[];
 }
 
 export interface ExperienceTableProps {
@@ -53,6 +54,7 @@ export function ExperienceTable({ experience }: ExperienceTableProps) {
           startDate={selected.startDate}
           endDate={selected.endDate}
           description={selected.description}
+          technologies={selected.technologies}
         />
       </span>
     </Flex>

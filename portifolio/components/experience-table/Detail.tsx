@@ -13,6 +13,7 @@ interface DetailProps {
   startDate: Date;
   endDate: Date | null;
   description: string[];
+  technologies: string[];
 }
 
 const dateOptions: Intl.DateTimeFormatOptions = {
@@ -28,30 +29,40 @@ export function Detail({
   startDate,
   endDate,
   description,
+  technologies,
 }: DetailProps) {
   return (
-    <Flex direction="column" gap={2}>
-      <Flex gap={1}>
-        <Typography variant="h6">{role} - </Typography>
-        <Link href={companyWebsite}>
-          <Typography variant="h6">{name}</Typography>
-        </Link>
-      </Flex>
+    <Flex
+      direction="column"
+      justifyContent="space-between"
+      extraClasses={[styles.detailContainer]}
+    >
       <span>
-        <Typography variant="subtitle2" color="disabled">
-          {formatDate(startDate, endDate)}
-        </Typography>
-        <Typography variant="subtitle2" color="disabled">
-          {location}
-        </Typography>
+        <Flex gap={1}>
+          <Typography variant="h6">{role} - </Typography>
+          <Link href={companyWebsite}>
+            <Typography variant="h6">{name}</Typography>
+          </Link>
+        </Flex>
+        <span>
+          <Typography variant="subtitle2" color="disabled">
+            {formatDate(startDate, endDate)}
+          </Typography>
+          <Typography variant="subtitle2" color="disabled">
+            {location}
+          </Typography>
+        </span>
+        <ul className={styles.description}>
+          {description.map((line, index) => (
+            <li key={index}>
+              <Typography wrap="breakWord">{line}</Typography>
+            </li>
+          ))}
+        </ul>
       </span>
-      <ul className={styles.description}>
-        {description.map((line, index) => (
-          <li key={index}>
-            <Typography wrap="breakWord">{line}</Typography>
-          </li>
-        ))}
-      </ul>
+      <Typography variant="subtitle2">{`Technologies: ${technologies.join(
+        ', '
+      )}`}</Typography>
     </Flex>
   );
 }
