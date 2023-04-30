@@ -12,3 +12,11 @@ html {
 body {
   overflow: hidden;
 }
+
+.fade-in {
+  transition: opacity 1s ease;
+}
+
+.hide {
+  opacity: 0;
+}
