@@ -138,6 +138,19 @@ importers:
       '@elton-okawa/prettier-config': link:../../prettier-config
       '@types/react': 18.0.26
 
+  packages/core/backdrop:
+    specifiers:
+      '@elton-okawa/commons': workspace:^0.0.0
+      '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/prettier-config': workspace:^1.0.0
+      '@types/react': 18.0.26
+    dependencies:
+      '@elton-okawa/commons': link:../commons
+    devDependencies:
+      '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/prettier-config': link:../../prettier-config
+      '@types/react': 18.0.26
+
   packages/core/button:
     specifiers:
       '@elton-okawa/commons': workspace:^0.0.0
@@ -300,6 +313,7 @@ importers:
 
   packages/core/navigation-drawer:
     specifiers:
+      '@elton-okawa/backdrop': workspace:^0.0.0
       '@elton-okawa/button': workspace:^0.0.0
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
@@ -315,6 +329,7 @@ importers:
     dependencies:
       '@elton-okawa/commons': link:../commons
     devDependencies:
+      '@elton-okawa/backdrop': link:../backdrop
       '@elton-okawa/button': link:../button
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
       '@elton-okawa/flex': link:../flex
