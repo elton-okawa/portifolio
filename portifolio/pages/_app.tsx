@@ -15,6 +15,7 @@ import {
   HomeIcon,
   InformationIcon,
   LinkedinIcon,
+  OpenInNewIcon,
 } from '@elton-okawa/icons';
 import { Avatar } from '@elton-okawa/avatar';
 import { Typography } from '@elton-okawa/typography';
@@ -93,8 +94,18 @@ function renderBottomNavigation() {
   return (
     <>
       <Divider />
-      <NavItem startIcon={<LinkedinIcon />} label="Linkedin" selected={false} />
-      <NavItem startIcon={<GitHubIcon />} label="GitHub" selected={false} />
+      <NavItem
+        startIcon={<LinkedinIcon />}
+        endIcon={<OpenInNewIcon />}
+        label="Linkedin"
+        selected={false}
+      />
+      <NavItem
+        startIcon={<GitHubIcon />}
+        endIcon={<OpenInNewIcon />}
+        label="GitHub"
+        selected={false}
+      />
     </>
   );
 }

@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react';
 import { Typography } from '@elton-okawa/typography';
 import { mergeClassNames } from '@elton-okawa/commons';
 import { Button } from '@elton-okawa/button';
+import { Flex } from '@elton-okawa/flex';
 import styles from './styles.module.css';
 import { useDrawerState } from './DrawerContext';
 import { NavHide } from './NavHide';
@@ -27,10 +28,16 @@ export function NavItem({
       extraClasses={[styles.navItem, !open ? styles.collapsed : '']}
     >
       {startIcon}
-      <NavHide>
-        <Typography>{label}</Typography>
-        {endIcon}
-      </NavHide>
+      <Flex
+        alignItems="center"
+        justifyContent="space-between"
+        extraClasses={[styles.grow]}
+      >
+        <NavHide>
+          <Typography>{label}</Typography>
+          {endIcon}
+        </NavHide>
+      </Flex>
     </Button>
   );
 }
