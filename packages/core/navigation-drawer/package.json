@@ -17,6 +17,7 @@
     "@elton-okawa/typography": "workspace:^0.0.0",
     "@elton-okawa/button": "workspace:^0.0.0",
     "@elton-okawa/flex": "workspace:^0.0.0",
+    "@elton-okawa/backdrop": "workspace:^0.0.0",
     "@types/react": "18.0.26",
     "open-props": "^1.5.3",
     "react": "^18.2.0"
@@ -28,6 +29,7 @@
     "@elton-okawa/typography": "workspace:^0.0.0",
     "@elton-okawa/button": "workspace:^0.0.0",
     "@elton-okawa/flex": "workspace:^0.0.0",
+    "@elton-okawa/backdrop": "workspace:^0.0.0",
     "open-props": "^1",
     "react": "^18"
   },

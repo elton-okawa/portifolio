@@ -1,5 +1,5 @@
 import React, {
-  ReactElement,
+  ReactNode,
   useContext,
   useState,
   Dispatch,
@@ -14,7 +14,7 @@ const DrawerApiContext = createContext<Dispatch<SetStateAction<boolean>>>(
 
 export interface DrawerProviderProps {
   defaultOpen: boolean;
-  children: ReactElement;
+  children: ReactNode;
 }
 
 export function DrawerProvider({ defaultOpen, children }: DrawerProviderProps) {
