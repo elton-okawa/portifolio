@@ -4,6 +4,7 @@ import { DrawerProvider } from './DrawerContext';
 import { DrawerContainer } from './DrawerContainer';
 import { DrawerButton } from './DrawerButton';
 import styles from './styles.module.css';
+import { DrawerBackdrop } from './DrawerBackdrop';
 
 export interface NavigationDrawerProps {
   top?: ReactNode;
@@ -21,6 +22,7 @@ export function NavigationDrawer(props: NavigationDrawerProps) {
         <div className={styles.middle}>{props.middle}</div>
         <div className={styles.bottom}>{props.bottom}</div>
       </DrawerContainer>
+      <DrawerBackdrop />
     </DrawerProvider>
   );
 }

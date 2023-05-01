@@ -14,6 +14,7 @@ import {
   mdiBriefcase,
   mdiInformation,
   mdiSend,
+  mdiOpenInNew,
 } from '@mdi/js';
 
 export interface IconProps extends ExtraProps {
@@ -65,4 +66,7 @@ export const InformationIcon = (props: IconProps) => (
 );
 export const SendIcon = (props: IconProps) => (
   <Icon icon={mdiSend} {...props} />
+);
+export const OpenInNewIcon = (props: IconProps) => (
+  <Icon icon={mdiOpenInNew} {...props} />
 );

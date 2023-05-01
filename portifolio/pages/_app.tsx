@@ -4,21 +4,28 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import NextLink from 'next/link';
 import {
   NavigationDrawer,
   NavItem,
   NavHide,
 } from '@elton-okawa/navigation-drawer';
-import { HomeIcon, InformationIcon } from '@elton-okawa/icons';
+import {
+  GitHubIcon,
+  HomeIcon,
+  InformationIcon,
+  LinkedinIcon,
+  OpenInNewIcon,
+} from '@elton-okawa/icons';
 import { Avatar } from '@elton-okawa/avatar';
 import { Typography } from '@elton-okawa/typography';
 import { Flex } from '@elton-okawa/flex';
 import Image from 'next/image';
 import profilePicture from '../public/profile.jpg';
-import { ContactLinks } from '../components/contact-links';
-import { AuthGuard } from '../components/auth';
 import { wrapper } from '../stores/store';
+import { Divider } from '@elton-okawa/divider';
+import { Link } from '@elton-okawa/link';
+import { GITHUB_URL, LINKEDIN_URL } from 'lib/constants';
 
 type ItemData = {
   icon: typeof HomeIcon;
@@ -32,20 +39,6 @@ const middleNavigation: ItemData[] = [
     label: 'Home',
     path: '/',
   },
-  // {
-  //   icon: HomeIcon,
-  //   label: 'Chat',
-  //   path: '/chat',
-  // },
-  // TODO eventually create this page
-  // {
-  //   icon: BriefcaseIcon,
-  //   label: "Experience",
-  //   path: "/experience",
-  // },
-];
-
-const bottomNavigation: ItemData[] = [
   {
     icon: InformationIcon,
     label: 'About',
@@ -67,11 +60,14 @@ function App({ Component, pageProps }: AppProps) {
       <NavigationDrawer
         top={renderTopNavigation()}
         middle={renderNavigation(middleNavigation, pathname)}
-        bottom={renderNavigation(bottomNavigation, pathname)}
+        bottom={renderBottomNavigation()}
       />
-      {/* TODO auth disabled for now */}
-      {/* <AuthGuard> */}
-      <Component {...pageProps} />;{/* </AuthGuard> */}
+      <div id="mainContainer">
+        {/* TODO auth disabled for now */}
+        {/* <AuthGuard> */}
+        <Component {...pageProps} />
+        {/* </AuthGuard> */}
+      </div>
     </>
   );
 }
@@ -87,13 +83,38 @@ function renderTopNavigation() {
           <Typography variant="h6" align="center">
             Elton Okawa
           </Typography>
-          <Typography align="center">Full Stack Developer</Typography>
-          <Typography variant="body2" align="center">
-            NodeJS | ReactJS | GCloud
+          <Typography variant="subtitle2" align="center">
+            Full Stack Developer
           </Typography>
-          <ContactLinks />
+          <Typography variant="subtitle2" color="disabled" align="center">
+            Node.js | React | GCP
+          </Typography>
         </Flex>
       </NavHide>
+    </>
+  );
+}
+
+function renderBottomNavigation() {
+  return (
+    <>
+      <Divider />
+      <Link href={LINKEDIN_URL}>
+        <NavItem
+          startIcon={<LinkedinIcon />}
+          endIcon={<OpenInNewIcon />}
+          label="Linkedin"
+          selected={false}
+        />
+      </Link>
+      <Link href={GITHUB_URL}>
+        <NavItem
+          startIcon={<GitHubIcon />}
+          endIcon={<OpenInNewIcon />}
+          label="GitHub"
+          selected={false}
+        />
+      </Link>
     </>
   );
 }
@@ -105,13 +126,13 @@ function renderNavigation(navigation: ItemData[], pathname: string) {
 function renderNavItem(pathname: string, data: ItemData) {
   const IconComponent = data.icon;
   return (
-    <Link key={data.path} href={data.path}>
+    <NextLink key={data.path} href={data.path}>
       <NavItem
-        icon={<IconComponent />}
+        startIcon={<IconComponent />}
         label={data.label}
         selected={pathname === data.path}
       />
-    </Link>
+    </NextLink>
   );
 }
 

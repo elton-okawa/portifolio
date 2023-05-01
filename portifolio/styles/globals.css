@@ -13,6 +13,10 @@ body {
   overflow: hidden;
 }
 
+#mainContainer {
+  margin-left: 56px;
+}
+
 .fade-in {
   transition: opacity 1s ease;
 }

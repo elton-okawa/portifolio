@@ -11,15 +11,19 @@ export default {
 const Template = ({ ...args }) => (
   <NavigationDrawer
     {...args}
-    top={<NavItem icon={<HomeIcon />} label="Home" selected />}
+    top={<NavItem startIcon={<HomeIcon />} label="Home" selected />}
     middle={
       <>
-        <NavItem icon={<AccountIcon />} label="Account" />
-        <NavItem icon={<AccountIcon />} label="Account" />
-        <NavItem icon={<AccountIcon />} label="Account" />
+        <NavItem startIcon={<AccountIcon />} label="Account" />
+        <NavItem startIcon={<AccountIcon />} label="Account" />
+        <NavItem
+          startIcon={<AccountIcon />}
+          endIcon={<HomeIcon />}
+          label="Account"
+        />
       </>
     }
-    bottom={<NavItem icon={<HomeIcon />} label="Home" />}
+    bottom={<NavItem startIcon={<HomeIcon />} label="Home" />}
   />
 );
 
