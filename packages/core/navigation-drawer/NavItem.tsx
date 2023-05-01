@@ -7,22 +7,29 @@ import { useDrawerState } from './DrawerContext';
 import { NavHide } from './NavHide';
 
 export interface NavItemProps {
-  icon: ReactElement;
+  startIcon: ReactElement;
+  endIcon?: ReactElement;
   label: string;
-  selected: boolean;
+  selected?: boolean;
 }
 
-export function NavItem(props: NavItemProps) {
+export function NavItem({
+  startIcon,
+  endIcon,
+  label,
+  selected = false,
+}: NavItemProps) {
   const open = useDrawerState();
 
   return (
     <Button
-      variant={props.selected ? 'filled' : 'text'}
+      variant={selected ? 'filled' : 'text'}
       extraClasses={[styles.navItem, !open ? styles.collapsed : '']}
     >
-      {props.icon}
+      {startIcon}
       <NavHide>
-        <Typography>{props.label}</Typography>
+        <Typography>{label}</Typography>
+        {endIcon}
       </NavHide>
     </Button>
   );

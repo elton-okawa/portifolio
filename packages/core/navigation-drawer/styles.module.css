@@ -73,6 +73,10 @@
   padding: 0 8px;
 }
 
+.navHide {
+  flex-grow: 1;
+}
+
 .selected {
   border-width: 0px;
   border-radius: var(--radius-5);

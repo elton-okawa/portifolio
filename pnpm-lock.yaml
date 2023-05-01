@@ -303,6 +303,7 @@ importers:
       '@elton-okawa/button': workspace:^0.0.0
       '@elton-okawa/commons': workspace:^0.0.0
       '@elton-okawa/eslint-config-react': workspace:^1.0.0
+      '@elton-okawa/flex': workspace:^0.0.0
       '@elton-okawa/icon-button': workspace:^0.0.0
       '@elton-okawa/icons': workspace:^0.0.0
       '@elton-okawa/prettier-config': workspace:^1.0.0
@@ -312,10 +313,11 @@ importers:
       open-props: ^1.5.3
       react: ^18.2.0
     dependencies:
-      '@elton-okawa/button': link:../button
       '@elton-okawa/commons': link:../commons
     devDependencies:
+      '@elton-okawa/button': link:../button
       '@elton-okawa/eslint-config-react': link:../../eslint-config-react
+      '@elton-okawa/flex': link:../flex
       '@elton-okawa/icon-button': link:../icon-button
       '@elton-okawa/icons': link:../icons
       '@elton-okawa/prettier-config': link:../../prettier-config

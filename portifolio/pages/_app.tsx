@@ -93,8 +93,8 @@ function renderBottomNavigation() {
   return (
     <>
       <Divider />
-      <NavItem icon={<LinkedinIcon />} label="Linkedin" selected={false} />
-      <NavItem icon={<GitHubIcon />} label="GitHub" selected={false} />
+      <NavItem startIcon={<LinkedinIcon />} label="Linkedin" selected={false} />
+      <NavItem startIcon={<GitHubIcon />} label="GitHub" selected={false} />
     </>
   );
 }
@@ -108,7 +108,7 @@ function renderNavItem(pathname: string, data: ItemData) {
   return (
     <NextLink key={data.path} href={data.path}>
       <NavItem
-        icon={<IconComponent />}
+        startIcon={<IconComponent />}
         label={data.label}
         selected={pathname === data.path}
       />
