@@ -24,6 +24,8 @@ import Image from 'next/image';
 import profilePicture from '../public/profile.jpg';
 import { wrapper } from '../stores/store';
 import { Divider } from '@elton-okawa/divider';
+import { Link } from '@elton-okawa/link';
+import { GITHUB_URL, LINKEDIN_URL } from 'lib/constants';
 
 type ItemData = {
   icon: typeof HomeIcon;
@@ -94,18 +96,22 @@ function renderBottomNavigation() {
   return (
     <>
       <Divider />
-      <NavItem
-        startIcon={<LinkedinIcon />}
-        endIcon={<OpenInNewIcon />}
-        label="Linkedin"
-        selected={false}
-      />
-      <NavItem
-        startIcon={<GitHubIcon />}
-        endIcon={<OpenInNewIcon />}
-        label="GitHub"
-        selected={false}
-      />
+      <Link href={LINKEDIN_URL}>
+        <NavItem
+          startIcon={<LinkedinIcon />}
+          endIcon={<OpenInNewIcon />}
+          label="Linkedin"
+          selected={false}
+        />
+      </Link>
+      <Link href={GITHUB_URL}>
+        <NavItem
+          startIcon={<GitHubIcon />}
+          endIcon={<OpenInNewIcon />}
+          label="GitHub"
+          selected={false}
+        />
+      </Link>
     </>
   );
 }
