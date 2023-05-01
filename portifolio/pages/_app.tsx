@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../styles/globals.css';
+import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -62,7 +62,7 @@ function App({ Component, pageProps }: AppProps) {
         middle={renderNavigation(middleNavigation, pathname)}
         bottom={renderBottomNavigation()}
       />
-      <div className={styles.mainContainer}>
+      <div id="mainContainer">
         {/* TODO auth disabled for now */}
         {/* <AuthGuard> */}
         <Component {...pageProps} />
